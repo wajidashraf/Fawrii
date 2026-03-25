@@ -7,7 +7,7 @@ const PLACEHOLDER_VIDEO_ID = "dQw4w9WgXcQ";
 export function DirectorVideoSection() {
   return (
     <section aria-label="Director video" className="bg-background">
-      <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24">
         <p className="text-center text-foreground-muted text-lg mb-6">
           {directorVideoContent.introText}
         </p>
