@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { CheckIcon, ChevronRightIcon, CircleDotIcon, getIcon } from "@/components/icons";
+import { VideoEmbed } from "@/components/ui/VideoEmbed";
 import {
   heroContent,
   directorVideoIntro,
@@ -92,17 +93,7 @@ export default function TutoringOnFawriiPage() {
       <section className="w-full bg-background-alt py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6 md:px-8">
           <p className="text-sm text-gray-600 mb-6">{directorVideoIntro}</p>
-          <div className="aspect-video bg-gray-200 rounded-xl shadow-sm overflow-hidden">
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="Fawrii Director Message"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full"
-            />
-          </div>
+          <VideoEmbed title="Fawrii Director Message" />
         </div>
       </section>
 
