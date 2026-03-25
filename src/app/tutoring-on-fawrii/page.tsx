@@ -90,7 +90,7 @@ export default function TutoringOnFawriiPage() {
 
       {/* ===== Director Video Section ===== */}
       <section className="w-full bg-background-alt py-16 md:py-24">
-        <div className="max-w-[90rem] mx-auto px-6 md:px-8">
+        <div className="max-w-6xl mx-auto px-6 md:px-8">
           <p className="text-sm text-gray-600 mb-6">{directorVideoIntro}</p>
           <div className="aspect-video bg-gray-200 rounded-xl shadow-sm overflow-hidden">
             <iframe
