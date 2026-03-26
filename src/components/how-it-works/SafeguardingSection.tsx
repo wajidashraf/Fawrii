@@ -21,10 +21,9 @@ export function SafeguardingSection() {
           {safeguardingContent.subIntro}
         </p>
 
-        <BulletList
-          items={safeguardingContent.bullets}
-          className="space-y-3 mb-8"
-        />
+        <div className="rounded-xl bg-background-alt border border-border p-5 sm:p-6 mb-8">
+          <BulletList items={safeguardingContent.bullets} />
+        </div>
 
         <div className="space-y-2 mb-8">
           {safeguardingContent.closing.map((line) => (

@@ -2,7 +2,7 @@ import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { BulletList } from "@/components/ui/BulletList";
 import { PrimaryButton } from "@/components/ui/PrimaryButton";
-import { StepBadge } from "@/components/ui/StepBadge";
+import { getIcon } from "@/components/icons";
 import { overviewContent, journeyDiagramSteps } from "@/content/how-it-works";
 
 export function OverviewSection() {
@@ -19,26 +19,48 @@ export function OverviewSection() {
         {overviewContent.intro}
       </p>
 
-      <BulletList items={overviewContent.steps} className="space-y-3 mb-6" />
+      <div className="rounded-xl bg-surface border border-border p-5 sm:p-6 mb-6">
+        <BulletList items={overviewContent.steps} />
+      </div>
 
       <p className="text-foreground-muted text-lg mb-10">
         {overviewContent.closing}
       </p>
 
-      {/* 4-Step Journey Diagram */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+      {/* 4-Step Journey Timeline */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-0 mb-10">
         {journeyDiagramSteps.map((item, index) => (
-          <div
-            key={item.step}
-            className="relative flex flex-col items-center text-center p-5 rounded-xl bg-surface border border-border"
-          >
-            <StepBadge step={item.step} />
-            <p className="mt-3 text-sm font-medium text-foreground">
-              {item.label}
-            </p>
-            {/* Connector line between steps */}
+          <div key={item.step} className="relative flex lg:flex-col items-stretch">
+            {/* Card */}
+            <div className="flex-1 w-full flex flex-col rounded-xl bg-surface border border-border p-5 sm:p-6 hover:shadow-md transition-shadow">
+              {/* Icon */}
+              <div className="flex items-center justify-center w-11 h-11 rounded-lg bg-primary-light mb-4 lg:mx-auto">
+                {getIcon(item.icon, "w-5 h-5 text-primary")}
+              </div>
+
+              {/* Step label */}
+              <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1 lg:text-center">
+                Step {item.step}
+              </p>
+
+              {/* Title */}
+              <h3 className="text-base font-semibold text-foreground mb-2 lg:text-center">
+                {item.label}
+              </h3>
+
+              {/* Description */}
+              <p className="text-sm text-foreground-muted leading-relaxed lg:text-center">
+                {item.description}
+              </p>
+            </div>
+
+            {/* Arrow connector (desktop only) */}
             {index < journeyDiagramSteps.length - 1 && (
-              <div className="hidden md:block absolute top-1/2 -right-2 w-4 h-0.5 bg-border" />
+              <div className="hidden lg:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-primary">
+                  <path d="M9 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </div>
             )}
           </div>
         ))}

@@ -120,9 +120,9 @@ export const section4Content = {
     "Your application is reviewed carefully to maintain professional standards, and you'll be guided clearly through what happens next before anything goes live.",
   cta: { label: "Apply to Become a Tutor", href: "/become-tutor" },
   timeline: [
-    { step: "Apply", label: "Share your background" },
-    { step: "Review", label: "We assess carefully" },
-    { step: "Onboard", label: "You take control" },
+    { step: "Apply", label: "Share your background", icon: "clipboardCheck" },
+    { step: "Review", label: "We assess carefully", icon: "shield" },
+    { step: "Onboard", label: "You take control", icon: "sliders" },
   ],
 };
 

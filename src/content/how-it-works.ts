@@ -32,10 +32,10 @@ export const overviewContent = {
 
 // Diagram labels (short versions for visual)
 export const journeyDiagramSteps = [
-  { step: 1, label: "Apply & approve" },
-  { step: 2, label: "Set how you tutor" },
-  { step: 3, label: "Teach lessons or classes" },
-  { step: 4, label: "Get paid" },
+  { step: 1, label: "Apply & approve", description: "Register and complete a short approval process.", icon: "clipboardCheck" },
+  { step: 2, label: "Set how you tutor", description: "Choose your subjects, availability, and rates.", icon: "sliders" },
+  { step: 3, label: "Teach lessons or classes", description: "Deliver sessions your way — booked, instant, or group.", icon: "monitor" },
+  { step: 4, label: "Get paid", description: "Reliable pay-outs on a clear schedule.", icon: "currency" },
 ];
 
 // ===== Step 1: Join & Get Approved =====

@@ -28,7 +28,9 @@ export function Step2Section() {
         </p>
 
         <p className="text-foreground font-medium mb-3">You choose:</p>
-        <BulletList items={step2Content.choices} className="space-y-2 mb-8" />
+        <div className="rounded-xl bg-surface border border-border p-5 sm:p-6 mb-8">
+          <BulletList items={step2Content.choices} />
+        </div>
 
         <p className="text-foreground font-medium mb-4">
           {step2Content.sessionTypesIntro}

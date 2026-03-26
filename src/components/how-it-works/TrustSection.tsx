@@ -20,10 +20,9 @@ export function TrustSection() {
           {trustContent.subIntro}
         </p>
 
-        <BulletList
-          items={trustContent.bullets}
-          className="space-y-3 mb-8"
-        />
+        <div className="rounded-xl bg-surface border border-border p-5 sm:p-6 mb-8">
+          <BulletList items={trustContent.bullets} />
+        </div>
 
         <div className="space-y-2">
           {trustContent.closing.map((line) => (
