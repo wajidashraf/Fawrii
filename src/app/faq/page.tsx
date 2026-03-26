@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { CheckIcon, ChevronRightIcon } from "@/components/icons";
+import { CheckIcon } from "@/components/icons";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
+import { PrimaryButton } from "@/components/ui/PrimaryButton";
+import { TextCta } from "@/components/ui/TextCta";
 import {
   heroContent,
   faqCategories,
@@ -15,33 +16,6 @@ export const metadata: Metadata = {
   description:
     "Everything tutors commonly ask before joining Fawrii, answered clearly and honestly.",
 };
-
-// ===== Reusable Components =====
-
-/** Primary CTA Button */
-function PrimaryButton({ href, children }: { href: string; children: React.ReactNode }) {
-  return (
-    <Link
-      href={href}
-      className="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-base font-medium text-white hover:bg-primary-hover shadow-sm hover:shadow-md transition-all duration-200"
-    >
-      {children}
-    </Link>
-  );
-}
-
-/** Secondary Text Link */
-function TextLink({ href, children }: { href: string; children: React.ReactNode }) {
-  return (
-    <Link
-      href={href}
-      className="inline-flex items-center text-primary hover:text-primary-hover font-medium transition-colors"
-    >
-      {children}
-      <span className="ml-1">→</span>
-    </Link>
-  );
-}
 
 // ===== Page =====
 
@@ -69,9 +43,9 @@ export default function FaqPage() {
               <PrimaryButton href={heroContent.primaryCta.href}>
                 {heroContent.primaryCta.label}
               </PrimaryButton>
-              <TextLink href={heroContent.secondaryCta.href}>
+              <TextCta href={heroContent.secondaryCta.href}>
                 {heroContent.secondaryCta.label}
-              </TextLink>
+              </TextCta>
             </div>
           </div>
         </div>
@@ -94,9 +68,9 @@ export default function FaqPage() {
             <FaqAccordion items={category.items} />
 
             <div className="mt-8">
-              <TextLink href={category.cta.href}>
+              <TextCta href={category.cta.href}>
                 {category.cta.label}
-              </TextLink>
+              </TextCta>
             </div>
           </div>
         </section>
@@ -210,9 +184,9 @@ export default function FaqPage() {
 
           <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
             {finalCtaContent.secondaryCtas.map((cta) => (
-              <TextLink key={cta.label} href={cta.href}>
+              <TextCta key={cta.label} href={cta.href}>
                 {cta.label}
-              </TextLink>
+              </TextCta>
             ))}
           </div>
         </div>

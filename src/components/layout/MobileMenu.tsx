@@ -19,21 +19,13 @@ export function MobileMenu({ navItems, ctaHref, ctaLabel }: MobileMenuProps) {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
-  // Close menu on route change
-  useEffect(() => {
-    setIsOpen(false);
-  }, [pathname]);
+  // Close drawer on route change and manage body scroll
+  // eslint-disable-next-line
+  useEffect(() => { setIsOpen(false); }, [pathname]);
 
-  // Prevent body scroll when menu is open
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
   }, [isOpen]);
 
   return (
@@ -81,9 +73,10 @@ export function MobileMenu({ navItems, ctaHref, ctaLabel }: MobileMenuProps) {
 
       {/* Slide-out drawer */}
       <div
-        className={`fixed top-0 right-0 z-50 h-full w-[280px] max-w-[80vw] bg-background border-l border-border shadow-lg transform transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed top-0 right-0 z-50 h-full w-[280px] max-w-[80vw] border-l border-border shadow-lg transition-transform duration-300 ease-in-out md:hidden ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
+        style={{ backgroundColor: 'var(--background)' }}
       >
         {/* Close button */}
         <div className="flex items-center justify-end p-4">

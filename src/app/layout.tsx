@@ -70,7 +70,6 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      data-scroll-behavior="smooth"
       className={`${plusJakarta.variable} ${inter.variable} h-full antialiased`}
       suppressHydrationWarning
     >

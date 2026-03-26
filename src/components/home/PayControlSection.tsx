@@ -1,6 +1,5 @@
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { BulletList } from "@/components/ui/BulletList";
 import { TextCta } from "@/components/ui/TextCta";
 import { payControlContent } from "@/content/homepage";
 
@@ -12,24 +11,41 @@ export function PayControlSection() {
       maxWidth="wide"
       ariaLabel="Pay, control and flexibility"
     >
-      <SectionHeading>{payControlContent.headline}</SectionHeading>
+      <div className="max-w-3xl">
+        <SectionHeading>{payControlContent.headline}</SectionHeading>
 
-      <p className="text-foreground text-lg font-medium leading-relaxed mb-2">
-        {payControlContent.intro}
-      </p>
-      <p className="text-foreground-muted text-base sm:text-lg leading-relaxed mb-6">
-        {payControlContent.subIntro}
-      </p>
+        {/* Key statement — bold emphasis */}
+        <p className="text-foreground font-semibold text-base sm:text-[17px] mb-2">
+          {payControlContent.intro}
+        </p>
+        <p className="text-foreground-muted text-[15px] sm:text-base leading-relaxed mb-5">
+          {payControlContent.subIntro}
+        </p>
 
-      <BulletList items={payControlContent.bullets} className="mb-8" />
+        {/* Bullet points in a callout card */}
+        <div className="rounded-xl bg-surface border border-border p-5 sm:p-6 mb-6">
+          <ul className="space-y-2.5">
+            {payControlContent.bullets.map((item) => (
+              <li
+                key={item}
+                className="flex items-start gap-3 text-foreground text-[15px] sm:text-base leading-relaxed"
+              >
+                <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-accent mt-2" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
 
-      <p className="text-foreground-muted text-base sm:text-lg leading-relaxed mb-8">
-        {payControlContent.closing}
-      </p>
+        {/* Closing — emphasized takeaway */}
+        <p className="text-foreground font-semibold text-base sm:text-[17px] mb-6">
+          {payControlContent.closing}
+        </p>
 
-      <TextCta href={payControlContent.cta.href}>
-        {payControlContent.cta.label}
-      </TextCta>
+        <TextCta href={payControlContent.cta.href}>
+          {payControlContent.cta.label}
+        </TextCta>
+      </div>
     </SectionWrapper>
   );
 }

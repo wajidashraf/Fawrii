@@ -17,18 +17,19 @@ export function Button({
   className,
 }: ButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary";
+    "inline-flex items-center justify-center font-medium transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary";
 
   const variants = {
     primary:
-      "bg-primary text-white rounded-lg hover:bg-primary-hover shadow-sm hover:shadow-md transition-all duration-200",
+      "bg-primary text-white rounded-lg hover:bg-primary-hover",
     secondary:
-      "text-primary hover:text-primary-hover underline-offset-4 hover:underline transition-colors duration-200",
+      "text-primary hover:text-primary-hover underline-offset-4 hover:underline",
   };
 
+  /* 10% smaller: default was px-6/py-3, lg was px-8/py-4 */
   const sizes = {
-    default: variant === "primary" ? "px-6 py-3 text-base" : "text-base",
-    lg: variant === "primary" ? "px-8 py-4 text-lg" : "text-lg",
+    default: variant === "primary" ? "px-5 py-2.5 text-[15px]" : "text-[15px]",
+    lg: variant === "primary" ? "px-7 py-3 text-base" : "text-base",
   };
 
   return (

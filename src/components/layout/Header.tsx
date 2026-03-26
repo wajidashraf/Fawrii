@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { MobileMenu } from "@/components/layout/MobileMenu";
@@ -7,15 +8,19 @@ import { links } from "@/content/links";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 [-webkit-backdrop-filter:blur(8px)] backdrop-blur supports-[backdrop-filter]:bg-background/80">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-background backdrop-blur-sm">
       <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link
-            href="/"
-            className="font-heading text-xl font-bold text-foreground"
-          >
-            {siteConfig.name}
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/images/fawrii-logo.png"
+              alt={siteConfig.name}
+              width={120}
+              height={40}
+              className="h-[36px] w-auto object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop nav */}

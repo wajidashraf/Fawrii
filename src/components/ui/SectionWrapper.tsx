@@ -25,7 +25,7 @@ export function SectionWrapper({
   const widths = {
     narrow: "max-w-3xl",
     wide: "max-w-[90rem]",
-    full: "max-w-[90rem]",
+    full: "w-full",
   };
 
   return (

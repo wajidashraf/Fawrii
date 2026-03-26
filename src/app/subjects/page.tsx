@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ComingSoon } from "@/components/ComingSoon";
 
 export const metadata: Metadata = {
   title: "Subjects",
@@ -7,15 +8,9 @@ export const metadata: Metadata = {
 
 export default function SubjectsPage() {
   return (
-    <main className="bg-background min-h-[calc(100vh-theme(spacing.16)-theme(spacing.48))] flex items-center justify-center">
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="font-heading text-4xl sm:text-5xl font-bold tracking-tight text-foreground mb-3">
-          Coming Soon
-        </h1>
-        <p className="text-foreground-muted text-base sm:text-lg">
-          This page is under development. Please check back soon.
-        </p>
-      </div>
-    </main>
+    <ComingSoon
+      title="Subjects"
+      description="Browse tutors by subject on Fawrii. Coming soon."
+    />
   );
 }

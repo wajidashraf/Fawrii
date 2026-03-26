@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import {
@@ -46,11 +47,14 @@ export function Footer() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           {/* Column 1 — Brand & positioning */}
           <div>
-            <Link
-              href="/"
-              className="font-heading text-lg font-bold text-foreground"
-            >
-              {siteConfig.name}
+            <Link href="/" className="inline-block">
+              <Image
+                src="/images/fawrii-logo.png"
+                alt={siteConfig.name}
+                width={120}
+                height={40}
+                className="h-[32px] w-auto object-contain"
+              />
             </Link>
             <p className="mt-3 text-[13px] text-foreground-subtle leading-relaxed">
               {siteConfig.footerStatement}

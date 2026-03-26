@@ -1,6 +1,5 @@
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { BulletList } from "@/components/ui/BulletList";
 import { trustedByContent } from "@/content/homepage";
 
 export function TrustedBySection() {
@@ -10,26 +9,37 @@ export function TrustedBySection() {
       background="default"
       maxWidth="wide"
       ariaLabel="Trusted by parents and schools"
-      className="py-12 md:py-16"
+      className="py-10 md:py-14"
     >
-      <SectionHeading>{trustedByContent.headline}</SectionHeading>
+      <div className="max-w-3xl">
+        <SectionHeading>{trustedByContent.headline}</SectionHeading>
 
-      <p className="text-foreground-muted text-base sm:text-lg leading-relaxed mb-2">
-        {trustedByContent.intro}
-      </p>
-      <p className="text-foreground-muted text-base sm:text-lg leading-relaxed mb-6">
-        {trustedByContent.subIntro}
-      </p>
+        {/* Intro — bold statement */}
+        <p className="text-foreground font-semibold text-base sm:text-[17px] mb-2">
+          {trustedByContent.intro}
+        </p>
+        <p className="text-foreground-muted text-[15px] sm:text-base leading-relaxed mb-5">
+          {trustedByContent.subIntro}
+        </p>
 
-      <BulletList
-        items={trustedByContent.bullets}
-        variant="compact"
-        className="mb-6"
-      />
+        {/* Trust signals — compact list per brief */}
+        <ul className="space-y-2.5 mb-6">
+          {trustedByContent.bullets.map((item) => (
+            <li
+              key={item}
+              className="flex items-start gap-3 text-foreground-muted text-[15px] sm:text-base leading-relaxed"
+            >
+              <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-accent mt-2" />
+              {item}
+            </li>
+          ))}
+        </ul>
 
-      <p className="text-foreground-muted text-base sm:text-lg leading-relaxed">
-        {trustedByContent.closing}
-      </p>
+        {/* Closing — reassurance */}
+        <p className="text-foreground-muted text-[15px] sm:text-base leading-relaxed">
+          {trustedByContent.closing}
+        </p>
+      </div>
 
       {/* No CTA — intentional per brief */}
     </SectionWrapper>

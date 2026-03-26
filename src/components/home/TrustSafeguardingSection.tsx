@@ -1,6 +1,5 @@
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { BulletList } from "@/components/ui/BulletList";
 import { TextCta } from "@/components/ui/TextCta";
 import { trustSafeguardingContent } from "@/content/homepage";
 
@@ -12,32 +11,48 @@ export function TrustSafeguardingSection() {
       maxWidth="wide"
       ariaLabel="Trust, safeguarding and support"
     >
-      <SectionHeading>{trustSafeguardingContent.headline}</SectionHeading>
+      <div className="max-w-3xl">
+        <SectionHeading>{trustSafeguardingContent.headline}</SectionHeading>
 
-      <p className="text-foreground-muted text-base sm:text-lg leading-relaxed mb-6">
-        {trustSafeguardingContent.intro}
-      </p>
+        {/* Intro — emphasized statement */}
+        <p className="text-foreground font-semibold text-base sm:text-[17px] mb-5">
+          {trustSafeguardingContent.intro}
+        </p>
 
-      <BulletList
-        items={trustSafeguardingContent.bullets}
-        className="mb-8"
-      />
+        {/* Key safeguarding points in callout card */}
+        <div className="rounded-xl bg-background-alt border border-border p-5 sm:p-6 mb-6">
+          <ul className="space-y-2.5 ">
+            {trustSafeguardingContent.bullets.map((item) => (
+              <li
+                key={item}
+                className="flex items-start gap-3 text-foreground text-[15px] sm:text-base leading-relaxed"
+              >
+                <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-accent mt-2" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
 
-      {/* Closing paragraphs */}
-      <div className="space-y-3 mb-8">
-        {trustSafeguardingContent.closing.map((line) => (
-          <p
-            key={line}
-            className="text-foreground-muted text-base sm:text-lg leading-relaxed"
-          >
-            {line}
-          </p>
-        ))}
+        {/* Closing — first line is key takeaway */}
+        <p className="text-foreground font-semibold text-base sm:text-[17px] mb-2">
+          {trustSafeguardingContent.closing[0]}
+        </p>
+        <div className="space-y-1.5 mb-6">
+          {trustSafeguardingContent.closing.slice(1).map((line) => (
+            <p
+              key={line}
+              className="text-foreground-muted text-[15px] sm:text-base leading-relaxed"
+            >
+              {line}
+            </p>
+          ))}
+        </div>
+
+        <TextCta href={trustSafeguardingContent.cta.href}>
+          {trustSafeguardingContent.cta.label}
+        </TextCta>
       </div>
-
-      <TextCta href={trustSafeguardingContent.cta.href}>
-        {trustSafeguardingContent.cta.label}
-      </TextCta>
     </SectionWrapper>
   );
 }

@@ -1,6 +1,8 @@
 import type { ApiResponse } from "@/types";
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "/api";
+const BASE_ORIGIN =
+  process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
 
 interface FetchOptions extends RequestInit {
   params?: Record<string, string>;
@@ -15,8 +17,10 @@ async function apiClient<T>(
 ): Promise<ApiResponse<T>> {
   const { params, ...fetchOptions } = options;
 
-  // Build URL with query params
-  const url = new URL(`${API_BASE_URL}${endpoint}`, window.location.origin);
+  // Build URL with query params (SSR-safe — no window dependency)
+  const origin =
+    typeof window !== "undefined" ? window.location.origin : BASE_ORIGIN;
+  const url = new URL(`${API_BASE_URL}${endpoint}`, origin);
   if (params) {
     Object.entries(params).forEach(([key, value]) => {
       url.searchParams.append(key, value);

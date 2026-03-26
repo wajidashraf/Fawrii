@@ -20,16 +20,17 @@
 
   /* Colors - Neutrals */
   --background: #FFFFFF;
-  --background-alt: #F9FAFB;
+  --background-alt: #F5F6F8;
   --foreground: #111827;
   --foreground-muted: #4B5563;
   --foreground-subtle: #9CA3AF;
 
   /* Colors - Surface */
   --surface: #FFFFFF;
+  --surface-card: #F7F8FA;
   --surface-hover: #F3F4F6;
-  --border: #F3F4F6;
-  --border-light: #F9FAFB;
+  --border: #E8EAED;
+  --border-light: #F3F4F6;
 
   /* Colors - Semantic */
   --success: #10B981;
@@ -72,6 +73,7 @@
   --color-accent-hover: var(--accent-hover);
   --color-accent-light: var(--accent-light);
   --color-surface: var(--surface);
+  --color-surface-card: var(--surface-card);
   --color-surface-hover: var(--surface-hover);
   --color-border: var(--border);
   --color-border-light: var(--border-light);
@@ -124,8 +126,7 @@ body {
 
 /* Responsive images */
 img,
-video,
-iframe {
+video {
   max-width: 100%;
   height: auto;
 }

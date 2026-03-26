@@ -25,7 +25,7 @@ export function BulletList({
         >
           <span
             aria-hidden="true"
-            className="mr-3 mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"
+className="mr-3 mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"
           />
           {item}
         </li>

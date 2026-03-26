@@ -12,8 +12,8 @@ export function cn(...inputs: ClassValue[]) {
 /**
  * Format a price value for display
  */
-export function formatPrice(price: number, currency = "PKR"): string {
-  return new Intl.NumberFormat("en-PK", {
+export function formatPrice(price: number, currency = "GBP"): string {
+  return new Intl.NumberFormat("en-GB", {
     style: "currency",
     currency,
     minimumFractionDigits: 0,

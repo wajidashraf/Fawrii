@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { CheckIcon, ChevronRightIcon, getIcon } from "@/components/icons";
+import { ChevronRightIcon, getIcon } from "@/components/icons";
+import { PrimaryButton } from "@/components/ui/PrimaryButton";
+import { TextCta } from "@/components/ui/TextCta";
+import { BulletList } from "@/components/ui/BulletList";
+import { IconBulletList } from "@/components/ui/IconBulletList";
+import { TickList } from "@/components/ui/TickList";
 import {
   heroContent,
   section1Content,
@@ -19,72 +23,6 @@ export const metadata: Metadata = {
   description:
     "Clear pay, fair rules, no surprises. You set your own rates on Fawrii and understand how payments and cancellations work.",
 };
-
-// ===== Reusable Components =====
-
-function PrimaryButton({ href, children }: { href: string; children: React.ReactNode }) {
-  return (
-    <Link
-      href={href}
-      className="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-base font-medium text-white hover:bg-primary-hover shadow-sm hover:shadow-md transition-all duration-200"
-    >
-      {children}
-    </Link>
-  );
-}
-
-function TextLink({ href, children }: { href: string; children: React.ReactNode }) {
-  return (
-    <Link
-      href={href}
-      className="inline-flex items-center text-primary hover:text-primary-hover font-medium transition-colors"
-    >
-      {children}
-      <span className="ml-1">→</span>
-    </Link>
-  );
-}
-
-function BulletList({ items }: { items: string[] }) {
-  return (
-    <ul className="space-y-3">
-      {items.map((item) => (
-        <li key={item} className="flex items-start gap-3 text-foreground-muted leading-relaxed">
-          <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
-          {item}
-        </li>
-      ))}
-    </ul>
-  );
-}
-
-function IconBulletList({ items }: { items: { text: string; icon: string }[] }) {
-  return (
-    <div className="space-y-4">
-      {items.map((item) => (
-        <div key={item.text} className="flex items-start gap-4">
-          <div className="flex-shrink-0 h-10 w-10 rounded-lg bg-primary-light flex items-center justify-center">
-            {getIcon(item.icon, "h-5 w-5 text-primary")}
-          </div>
-          <p className="text-foreground-muted pt-2">{item.text}</p>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-function TickList({ items }: { items: string[] }) {
-  return (
-    <ul className="space-y-4">
-      {items.map((item) => (
-        <li key={item} className="flex gap-3 items-start">
-          <CheckIcon className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-          <span className="text-foreground-muted">{item}</span>
-        </li>
-      ))}
-    </ul>
-  );
-}
 
 // ===== Page =====
 
@@ -109,9 +47,9 @@ export default function PayAndRulesPage() {
               <PrimaryButton href={heroContent.primaryCta.href}>
                 {heroContent.primaryCta.label}
               </PrimaryButton>
-              <TextLink href={heroContent.secondaryCta.href}>
+              <TextCta href={heroContent.secondaryCta.href}>
                 {heroContent.secondaryCta.label}
-              </TextLink>
+              </TextCta>
             </div>
           </div>
         </div>
@@ -140,9 +78,9 @@ export default function PayAndRulesPage() {
             {section1Content.closing}
           </p>
 
-          <TextLink href={section1Content.cta.href}>
+          <TextCta href={section1Content.cta.href}>
             {section1Content.cta.label}
-          </TextLink>
+          </TextCta>
         </div>
       </section>
 
@@ -176,9 +114,9 @@ export default function PayAndRulesPage() {
             <PrimaryButton href={section2Content.primaryCta.href}>
               {section2Content.primaryCta.label}
             </PrimaryButton>
-            <TextLink href={section2Content.secondaryCta.href}>
+            <TextCta href={section2Content.secondaryCta.href}>
               {section2Content.secondaryCta.label}
-            </TextLink>
+            </TextCta>
           </div>
         </div>
       </section>
@@ -226,7 +164,7 @@ export default function PayAndRulesPage() {
                 <ul className="space-y-2 mb-4 flex-1">
                   {type.bullets.map((bullet) => (
                     <li key={bullet} className="flex items-start gap-2.5 text-sm text-foreground-muted">
-                      <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
+                      <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
                       {bullet}
                     </li>
                   ))}
@@ -243,9 +181,9 @@ export default function PayAndRulesPage() {
             {section3Content.closing}
           </p>
 
-          <TextLink href={section3Content.cta.href}>
+          <TextCta href={section3Content.cta.href}>
             {section3Content.cta.label}
-          </TextLink>
+          </TextCta>
         </div>
       </section>
 
@@ -332,9 +270,9 @@ export default function PayAndRulesPage() {
             ))}
           </div>
 
-          <TextLink href={section5Content.cta.href}>
+          <TextCta href={section5Content.cta.href}>
             {section5Content.cta.label}
-          </TextLink>
+          </TextCta>
         </div>
       </section>
 
@@ -440,9 +378,9 @@ export default function PayAndRulesPage() {
 
           <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
             {finalCtaContent.secondaryCtas.map((cta) => (
-              <TextLink key={cta.label} href={cta.href}>
+              <TextCta key={cta.label} href={cta.href}>
                 {cta.label}
-              </TextLink>
+              </TextCta>
             ))}
           </div>
         </div>

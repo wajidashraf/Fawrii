@@ -1,5 +1,3 @@
-import type { Metadata } from "next";
-
 interface ComingSoonProps {
   title: string;
   description?: string;
@@ -9,7 +7,7 @@ interface ComingSoonProps {
  * Reusable Coming Soon component for pages under development.
  * Use this to wrap the main content area in any page that's not ready yet.
  */
-export function ComingSoon({ title, description }: ComingSoonProps) {
+export function ComingSoon({ description }: ComingSoonProps) {
   return (
     <main className="bg-background min-h-[calc(100vh-theme(spacing.16)-theme(spacing.48))] flex items-center justify-center">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

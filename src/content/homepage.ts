@@ -2,9 +2,9 @@ import { links } from "./links";
 
 // ===== Hero Section =====
 export const heroContent = {
-  headline: "Tutoring That Fits Your Life — On Your Terms.",
+  headline: "Tutoring That Fits Your Life On Your Terms.",
   subheading:
-    "Fawrii is a tutor-first online platform where you decide how you teach, what you charge, and when you work — within a clear, professional framework designed to support you.",
+    "Fawrii is a tutor-first online platform where you decide how you teach, what you charge, and when you work within a clear, professional framework designed to support you.",
   primaryCta: { label: "Become a Tutor", href: links.becomeTutor },
   secondaryCta: { label: "How it works", href: links.howTutorsWorkAnchor },
 };
