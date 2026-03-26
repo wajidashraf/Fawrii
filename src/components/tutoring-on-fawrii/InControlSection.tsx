@@ -29,7 +29,7 @@ export function InControlSection() {
       </div>
 
       {/* Timeline: Apply → Review → Onboard */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-0 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-8">
         {section4Content.timeline.map((item, idx) => (
           <div key={item.step} className="relative flex sm:flex-col items-stretch">
             {/* Card */}
