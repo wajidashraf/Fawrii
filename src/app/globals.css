@@ -1,22 +1,22 @@
 @import "tailwindcss";
 
-/* ===== Design System Variables ===== */
+/* ===== Design System Variables (matched to Fawrii platform brand) ===== */
 :root {
-  /* Colors - Primary */
-  --primary: #4F46E5;
-  --primary-hover: #4338CA;
-  --primary-light: #EEF2FF;
-  --primary-dark: #3730A3;
+  /* Colors - Primary (Fawrii Teal) */
+  --primary: #168686;
+  --primary-hover: #127070;
+  --primary-light: #E6F7F7;
+  --primary-dark: #0E5A5A;
 
-  /* Colors - Secondary */
-  --secondary: #10B981;
-  --secondary-hover: #059669;
-  --secondary-light: #ECFDF5;
+  /* Colors - Secondary (Fawrii Teal gradient — for banners/CTAs) */
+  --secondary: #3D7A84;
+  --secondary-hover: #4A919C;
+  --secondary-light: #E6F2FE;
 
-  /* Colors - Accent */
-  --accent: #F59E0B;
-  --accent-hover: #D97706;
-  --accent-light: #FFFBEB;
+  /* Colors - Accent (Orange — charts/highlights) */
+  --accent: #FF8A3D;
+  --accent-hover: #E67630;
+  --accent-light: #FFF4EC;
 
   /* Colors - Neutrals */
   --background: #FFFFFF;
@@ -28,12 +28,12 @@
   /* Colors - Surface */
   --surface: #FFFFFF;
   --surface-hover: #F3F4F6;
-  --border: #E5E7EB;
-  --border-light: #F3F4F6;
+  --border: #F3F4F6;
+  --border-light: #F9FAFB;
 
   /* Colors - Semantic */
   --success: #10B981;
-  --warning: #F59E0B;
+  --warning: #FF8A3D;
   --error: #EF4444;
   --info: #3B82F6;
 
@@ -98,23 +98,48 @@
   --radius-full: var(--radius-full);
 }
 
-/* ===== Base Styles ===== */
-* {
+/* ===== Base Styles & Cross-Browser Resets ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   border-color: var(--border);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
+/* Responsive images */
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Focus styles for accessibility */
 :focus-visible {
   outline: 2px solid var(--primary);
   outline-offset: 2px;
+}
+
+/* Minimum touch target size for mobile (44px) */
+@media (pointer: coarse) {
+  a,
+  button {
+    min-height: 44px;
+  }
 }

@@ -9,17 +9,17 @@ const HERO_IMAGE =
 export function HeroSection() {
   return (
     <section aria-label="Hero" className="bg-background">
-      <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-30">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Copy */}
-          <div className="max-w-xl">
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-tight">
+      <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-28 lg:py-32">
+        <div className="grid lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-center">
+          {/* Copy — always first on mobile */}
+          <div className="max-w-xl order-1">
+            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-[1.15]">
               {heroContent.headline}
             </h1>
-            <p className="mt-6 text-lg sm:text-xl text-foreground-muted leading-relaxed">
+            <p className="mt-5 sm:mt-6 text-base sm:text-lg md:text-xl text-foreground-muted leading-relaxed">
               {heroContent.subheading}
             </p>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
+            <div className="mt-7 sm:mt-8 flex flex-wrap items-center gap-4">
               <Button href={heroContent.primaryCta.href} size="lg">
                 {heroContent.primaryCta.label}
               </Button>
@@ -32,8 +32,8 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Hero image — replace with real tutor image */}
-          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-background-alt shadow-lg">
+          {/* Hero image — shows after copy on mobile, beside on desktop */}
+          <div className="relative aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/3] rounded-2xl overflow-hidden bg-background-alt shadow-lg order-2">
             <Image
               src={HERO_IMAGE}
               alt="A professional tutor preparing for an online lesson"

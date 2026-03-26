@@ -25,7 +25,7 @@ function FooterColumn({
           <li key={item.label}>
             <Link
               href={item.href}
-              className="text-[13px] text-foreground-muted hover:text-foreground transition-colors leading-relaxed"
+              className="text-[13px] text-foreground-muted hover:text-foreground transition-colors leading-relaxed py-1"
             >
               {item.label}
             </Link>
@@ -78,7 +78,7 @@ export function Footer() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="text-xs text-foreground-subtle hover:text-foreground-muted transition-colors"
+                  className="text-xs text-foreground-subtle hover:text-foreground-muted transition-colors py-1"
                 >
                   {item.label}
                 </Link>

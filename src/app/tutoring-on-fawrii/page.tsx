@@ -167,7 +167,7 @@ export default function TutoringOnFawriiPage() {
             {section2Content.workFormats.map((format) => (
               <div key={format.title} className="bg-background p-8 rounded-xl shadow-sm">
                 <div className="mb-4">
-                  {getIcon(format.icon, "w-6 h-6 text-emerald-600")}
+                  {getIcon(format.icon, "w-6 h-6 text-primary")}
                 </div>
                 <h4 className="text-lg font-bold text-foreground mb-4">
                   {format.title}
@@ -175,7 +175,7 @@ export default function TutoringOnFawriiPage() {
                 <ul className="space-y-2">
                   {format.bullets.map((bullet) => (
                     <li key={bullet} className="flex gap-3 items-start">
-                      <span className="text-emerald-600 font-bold mt-0.5">•</span>
+                      <span className="text-primary font-bold mt-0.5">•</span>
                       <span className="text-gray-700 text-sm">{bullet}</span>
                     </li>
                   ))}
@@ -212,7 +212,7 @@ export default function TutoringOnFawriiPage() {
             <ul className="space-y-4">
               {section3Content.standards.map((standard) => (
                 <li key={standard} className="flex gap-3 items-start">
-                  <CheckIcon className="w-5 h-5 text-emerald-600 flex-shrink-0" />
+                  <CheckIcon className="w-5 h-5 text-primary flex-shrink-0" />
                   <span className="text-gray-700">{standard}</span>
                 </li>
               ))}
@@ -354,7 +354,7 @@ export default function TutoringOnFawriiPage() {
             <ul className="space-y-4">
               {section6Content.features.map((feature) => (
                 <li key={feature} className="flex gap-3 items-start">
-                  <CheckIcon className="w-5 h-5 text-emerald-600 flex-shrink-0" />
+                  <CheckIcon className="w-5 h-5 text-primary flex-shrink-0" />
                   <span className="text-gray-700">{feature}</span>
                 </li>
               ))}

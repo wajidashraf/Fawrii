@@ -1,0 +1,994 @@
+<div id="root">
+    <div class="p-toast p-component p-toast-top-right" data-pc-name="toast" data-pc-section="root"
+        style="position: fixed; top: 20px; right: 20px;">
+        <div></div>
+    </div>
+    <header
+        class="h-[72px] bg-white border-b border-gray-200 flex items-center justify-between px-8 fixed top-0 left-0 right-0 z-50">
+        <div class="flex items-center"><img alt="Fawrii" class="h-[40px] w-auto object-contain"
+                src="https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-09-23/m0rZyFoyip.png"></div>
+        <div class="flex items-center gap-6">
+            <div class="relative"><button class="relative p-2 hover:bg-gray-50 rounded-full transition-colors"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-bell w-6 h-6 text-gray-600" aria-hidden="true">
+                        <path d="M10.268 21a2 2 0 0 0 3.464 0"></path>
+                        <path
+                            d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326">
+                        </path>
+                    </svg></button></div>
+            <div class="relative"><button
+                    class="flex items-center gap-3 hover:bg-gray-50 rounded-lg px-2 py-1.5 transition-colors">
+                    <div class="  rounded-full overflow-hidden  ">
+                        <div class="w-10 h-10 p-avatar p-component p-avatar-image p-avatar-circle" data-pc-name="avatar"
+                            data-pc-section="root"><img alt="avatar" data-pc-section="image"
+                                src="https://avatars.githubusercontent.com/u/3?v=4"></div>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-sm font-semibold text-gray-900">FAWRII Uk</div>
+                        <div class="flex items-center gap-1.5"><span
+                                class="w-2 h-2 rounded-full bg-green-500"></span><span
+                                class="text-xs text-gray-600">Online</span></div>
+                    </div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-chevron-down w-4 h-4 text-gray-600" aria-hidden="true">
+                        <path d="m6 9 6 6 6-6"></path>
+                    </svg>
+                </button></div>
+        </div>
+    </header>
+    <aside
+        class="admin-sidebar-scroll w-[268px] h-[calc(100vh-72px)] bg-[#168686] text-white flex flex-col overflow-y-auto fixed left-0 top-[72px] z-40">
+        <nav class="admin-sidebar-scroll flex-1 px-3 pt-4 overflow-y-auto min-h-0">
+            <ul class="space-y-0.5">
+                <li><a class="flex items-center cursor-pointer gap-3 px-3.5 py-2.5 rounded-lg bg-[#E6F2FE] text-[#16161D] active"
+                        href="/admin/dashboard" data-discover="true" aria-current="page"><img alt="Dashboard"
+                            class="w-5 h-5 "
+                            src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M7.5%202.5H3.33333C2.8731%202.5%202.5%202.8731%202.5%203.33333V9.16667C2.5%209.6269%202.8731%2010%203.33333%2010H7.5C7.96024%2010%208.33333%209.6269%208.33333%209.16667V3.33333C8.33333%202.8731%207.96024%202.5%207.5%202.5Z'%20stroke='%23F7FAFF'%20stroke-width='1.25'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M16.6667%202.5H12.5C12.0398%202.5%2011.6667%202.8731%2011.6667%203.33333V5.83333C11.6667%206.29357%2012.0398%206.66667%2012.5%206.66667H16.6667C17.1269%206.66667%2017.5%206.29357%2017.5%205.83333V3.33333C17.5%202.8731%2017.1269%202.5%2016.6667%202.5Z'%20stroke='%23F7FAFF'%20stroke-width='1.25'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M16.6667%2010H12.5C12.0398%2010%2011.6667%2010.3731%2011.6667%2010.8333V16.6667C11.6667%2017.1269%2012.0398%2017.5%2012.5%2017.5H16.6667C17.1269%2017.5%2017.5%2017.1269%2017.5%2016.6667V10.8333C17.5%2010.3731%2017.1269%2010%2016.6667%2010Z'%20stroke='%23F7FAFF'%20stroke-width='1.25'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M7.5%2013.3335H3.33333C2.8731%2013.3335%202.5%2013.7066%202.5%2014.1668V16.6668C2.5%2017.1271%202.8731%2017.5002%203.33333%2017.5002H7.5C7.96024%2017.5002%208.33333%2017.1271%208.33333%2016.6668V14.1668C8.33333%2013.7066%207.96024%2013.3335%207.5%2013.3335Z'%20stroke='%23F7FAFF'%20stroke-width='1.25'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"><span
+                            class="text-[15px] font-normal">Dashboard</span></a></li>
+                <li><button
+                        class="flex items-center justify-between w-full cursor-pointer gap-3 px-3.5 py-2.5 rounded-lg text-white">
+                        <div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-5 h-5"
+                                aria-hidden="true">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                            </svg><span class="text-[15px] font-normal">People</span></div><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-chevron-down w-4 h-4 transition-transform duration-200 rotate-180"
+                            aria-hidden="true">
+                            <path d="m6 9 6 6 6-6"></path>
+                        </svg>
+                    </button>
+                    <div class="overflow-hidden transition-all duration-300 ease-in-out max-h-96 opacity-100">
+                        <ul class="mt-2 ml-0 space-y-1">
+                            <li><a class="block w-[75%] cursor-pointer px-8 py-2.5 mx-3 rounded-lg text-[12px]   transition-all duration-200 text-white hover:bg-[#E6F2FE] hover:text-[#16161D]"
+                                    href="/admin/people/tutors" data-discover="true">Teachers</a></li>
+                            <li><a class="block w-[75%] cursor-pointer px-8 py-2.5 mx-3 rounded-lg text-[12px]   transition-all duration-200 text-white hover:bg-[#E6F2FE] hover:text-[#16161D]"
+                                    href="/admin/people/students" data-discover="true">Students</a></li>
+                            <li><a class="block w-[75%] cursor-pointer px-8 py-2.5 mx-3 rounded-lg text-[12px]   transition-all duration-200 text-white hover:bg-[#E6F2FE] hover:text-[#16161D]"
+                                    href="/admin/people/parents" data-discover="true">Parents</a></li>
+                            <li><a class="block w-[75%] cursor-pointer px-8 py-2.5 mx-3 rounded-lg text-[12px]   transition-all duration-200 text-white hover:bg-[#E6F2FE] hover:text-[#16161D]"
+                                    href="/admin/people/admins" data-discover="true">Admins</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><button
+                        class="flex items-center justify-between w-full cursor-pointer gap-3 px-3.5 py-2.5 rounded-lg text-white">
+                        <div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-5 h-5"
+                                aria-hidden="true">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                            </svg><span class="text-[15px] font-normal">Communication</span></div><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-chevron-down w-4 h-4 transition-transform duration-200"
+                            aria-hidden="true">
+                            <path d="m6 9 6 6 6-6"></path>
+                        </svg>
+                    </button>
+                    <div class="overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0">
+                        <ul class="mt-2 ml-0 space-y-1">
+                            <li><a class="block w-[75%] cursor-pointer px-8 py-2.5 mx-3 rounded-lg text-[12px]   transition-all duration-200 text-white hover:bg-[#E6F2FE] hover:text-[#16161D]"
+                                    href="/admin/communication/broadcasts" data-discover="true">Broadcasts</a></li>
+                            <li><a class="block w-[75%] cursor-pointer px-8 py-2.5 mx-3 rounded-lg text-[12px]   transition-all duration-200 text-white hover:bg-[#E6F2FE] hover:text-[#16161D]"
+                                    href="/admin/communication/emails" data-discover="true">Emails</a></li>
+                            <li><a class="block w-[75%] cursor-pointer px-8 py-2.5 mx-3 rounded-lg text-[12px]   transition-all duration-200 text-white hover:bg-[#E6F2FE] hover:text-[#16161D]"
+                                    href="/admin/communication/messages" data-discover="true">Messages</a></li>
+                            <li><a class="block w-[75%] cursor-pointer px-8 py-2.5 mx-3 rounded-lg text-[12px]   transition-all duration-200 text-white hover:bg-[#E6F2FE] hover:text-[#16161D]"
+                                    href="/admin/communication/lesson-reminders" data-discover="true">Lesson
+                                    Reminders</a></li>
+                            <li><a class="block w-[75%] cursor-pointer px-8 py-2.5 mx-3 rounded-lg text-[12px]   transition-all duration-200 text-white hover:bg-[#E6F2FE] hover:text-[#16161D]"
+                                    href="/admin/communication/lesson-notifications" data-discover="true">Lesson
+                                    Notifications</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><button
+                        class="flex items-center justify-between w-full cursor-pointer gap-3 px-3.5 py-2.5 rounded-lg text-white">
+                        <div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-5 h-5"
+                                aria-hidden="true">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                            </svg><span class="text-[15px] font-normal">Accounting</span></div><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-chevron-down w-4 h-4 transition-transform duration-200 rotate-180"
+                            aria-hidden="true">
+                            <path d="m6 9 6 6 6-6"></path>
+                        </svg>
+                    </button>
+                    <div class="overflow-hidden transition-all duration-300 ease-in-out max-h-96 opacity-100">
+                        <ul class="mt-2 ml-0 space-y-1">
+                            <li><a class="block w-[75%] cursor-pointer px-8 py-2.5 mx-3 rounded-lg text-[12px]   transition-all duration-200 text-white hover:bg-[#E6F2FE] hover:text-[#16161D]"
+                                    href="/admin/accounting/tutors" data-discover="true">Teachers</a></li>
+                            <li><a class="block w-[75%] cursor-pointer px-8 py-2.5 mx-3 rounded-lg text-[12px]   transition-all duration-200 text-white hover:bg-[#E6F2FE] hover:text-[#16161D]"
+                                    href="/admin/accounting/students" data-discover="true">Students</a></li>
+                            <li><a class="block w-[75%] cursor-pointer px-8 py-2.5 mx-3 rounded-lg text-[12px]   transition-all duration-200 text-white hover:bg-[#E6F2FE] hover:text-[#16161D]"
+                                    href="/admin/accounting/parents" data-discover="true">Parents</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a class="flex items-center cursor-pointer gap-3 px-3.5 py-2.5 rounded-lg text-white hover:bg-[#E6F2FE] hover:text-[#16161D]"
+                        href="/admin/resources" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-5 h-5"
+                            aria-hidden="true">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                            <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                        </svg><span class="text-[15px] font-normal">Resources</span></a></li>
+                <li><a class="flex items-center cursor-pointer gap-3 px-3.5 py-2.5 rounded-lg text-white hover:bg-[#E6F2FE] hover:text-[#16161D]"
+                        href="/admin/cms" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-layout-dashboard w-5 h-5" aria-hidden="true">
+                            <rect width="7" height="9" x="3" y="3" rx="1"></rect>
+                            <rect width="7" height="5" x="14" y="3" rx="1"></rect>
+                            <rect width="7" height="9" x="14" y="12" rx="1"></rect>
+                            <rect width="7" height="5" x="3" y="16" rx="1"></rect>
+                        </svg><span class="text-[15px] font-normal">CMS Management</span></a></li>
+                <li><a class="flex items-center cursor-pointer gap-3 px-3.5 py-2.5 rounded-lg text-white hover:bg-[#E6F2FE] hover:text-[#16161D]"
+                        href="/admin/account-deletion-requests" data-discover="true"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-layout-dashboard w-5 h-5" aria-hidden="true">
+                            <rect width="7" height="9" x="3" y="3" rx="1"></rect>
+                            <rect width="7" height="5" x="14" y="3" rx="1"></rect>
+                            <rect width="7" height="9" x="14" y="12" rx="1"></rect>
+                            <rect width="7" height="5" x="3" y="16" rx="1"></rect>
+                        </svg><span class="text-[15px] font-normal">Account Deletion Requests</span></a></li>
+                <li><a class="flex items-center cursor-pointer gap-3 px-3.5 py-2.5 rounded-lg text-white hover:bg-[#E6F2FE] hover:text-[#16161D]"
+                        href="/admin/visitor-enquiry" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-layout-dashboard w-5 h-5" aria-hidden="true">
+                            <rect width="7" height="9" x="3" y="3" rx="1"></rect>
+                            <rect width="7" height="5" x="14" y="3" rx="1"></rect>
+                            <rect width="7" height="9" x="14" y="12" rx="1"></rect>
+                            <rect width="7" height="5" x="3" y="16" rx="1"></rect>
+                        </svg><span class="text-[15px] font-normal">Visitor's Enquiry</span></a></li>
+                <li><button
+                        class="flex items-center justify-between w-full cursor-pointer gap-3 px-3.5 py-2.5 rounded-lg text-white">
+                        <div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-layout-dashboard w-5 h-5" aria-hidden="true">
+                                <rect width="7" height="9" x="3" y="3" rx="1"></rect>
+                                <rect width="7" height="5" x="14" y="3" rx="1"></rect>
+                                <rect width="7" height="9" x="14" y="12" rx="1"></rect>
+                                <rect width="7" height="5" x="3" y="16" rx="1"></rect>
+                            </svg><span class="text-[15px] font-normal">Activity</span></div><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-chevron-down w-4 h-4 transition-transform duration-200"
+                            aria-hidden="true">
+                            <path d="m6 9 6 6 6-6"></path>
+                        </svg>
+                    </button>
+                    <div class="overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0">
+                        <ul class="mt-2 ml-0 space-y-1">
+                            <li><a class="block w-[75%] cursor-pointer px-8 py-2.5 mx-3 rounded-lg text-[12px]   transition-all duration-200 text-white hover:bg-[#E6F2FE] hover:text-[#16161D]"
+                                    href="/admin/activity/jobs" data-discover="true">Jobs</a></li>
+                            <li><a class="block w-[75%] cursor-pointer px-8 py-2.5 mx-3 rounded-lg text-[12px]   transition-all duration-200 text-white hover:bg-[#E6F2FE] hover:text-[#16161D]"
+                                    href="/admin/activity/calendar" data-discover="true">Calendar</a></li>
+                            <li><a class="block w-[75%] cursor-pointer px-8 py-2.5 mx-3 rounded-lg text-[12px]   transition-all duration-200 text-white hover:bg-[#E6F2FE] hover:text-[#16161D]"
+                                    href="/admin/activity/tasks" data-discover="true">Tasks</a></li>
+                            <li><a class="block w-[75%] cursor-pointer px-8 py-2.5 mx-3 rounded-lg text-[12px]   transition-all duration-200 text-white hover:bg-[#E6F2FE] hover:text-[#16161D]"
+                                    href="/admin/activity/reviews" data-discover="true">Reviews</a></li>
+                            <li><a class="block w-[75%] cursor-pointer px-8 py-2.5 mx-3 rounded-lg text-[12px]   transition-all duration-200 text-white hover:bg-[#E6F2FE] hover:text-[#16161D]"
+                                    href="/admin/activity/discontinuations" data-discover="true">No Shows</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><button
+                        class="flex items-center justify-between w-full cursor-pointer gap-3 px-3.5 py-2.5 rounded-lg text-white">
+                        <div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-headphones w-5 h-5"
+                                aria-hidden="true">
+                                <path
+                                    d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3">
+                                </path>
+                            </svg><span class="text-[15px] font-normal">Support</span></div><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-chevron-down w-4 h-4 transition-transform duration-200"
+                            aria-hidden="true">
+                            <path d="m6 9 6 6 6-6"></path>
+                        </svg>
+                    </button>
+                    <div class="overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0">
+                        <ul class="mt-2 ml-0 space-y-1">
+                            <li><a class="block w-[75%] cursor-pointer px-8 py-2.5 mx-3 rounded-lg text-[12px]   transition-all duration-200 text-white hover:bg-[#E6F2FE] hover:text-[#16161D]"
+                                    href="/admin/support/ticket" data-discover="true">Ticket</a></li>
+                            <li><a class="block w-[75%] cursor-pointer px-8 py-2.5 mx-3 rounded-lg text-[12px]   transition-all duration-200 text-white hover:bg-[#E6F2FE] hover:text-[#16161D]"
+                                    href="/admin/support/faqs" data-discover="true">FAQs</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="px-4 py-3 text-[11px] text-white/50 text-center border-t border-white/10 mt-auto">© 2024 Fawrii. All
+            Rights Reserved</div>
+    </aside>
+    <main class="ml-[268px] mt-[72px] min-h-[calc(100vh-72px)] bg-gray-50 overflow-x-hidden">
+        <div class="p-8 space-y-6">
+            <div class="">
+                <div class="bg-gradient-to-r from-[#3d7a84] to-[#4a919c] rounded-2xl shadow-lg p-6 md:p-8">
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                        <div class="flex items-center gap-4 md:gap-6">
+                            <div class="relative flex-shrink-0">
+                                <div class="w-20 h-20 md:w-24 md:h-24"><img alt="Daniel" width="96" height="96"
+                                        class="object-contain" src="/assets/man-CQeHfHpK.png"></div>
+                                <div class="absolute -top-3 -left-8"><img alt="Hello" width="55" height="55"
+                                        class="object-contain" src="/assets/HELLO-BneAodJc.svg"></div>
+                            </div>
+                            <div class="text-white">
+                                <h3 class="text-xl md:text-2xl font-bold mb-1">Hello FAWRII Uk</h3>
+                                <p class="text-sm md:text-base text-white/90">Welcome to your dashboard!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div
+                    class="bg-white rounded-lg p-4 pl-4 border-l-[4px] border-yellow-400 shadow-sm hover:shadow-md transition-shadow min-h-[110px] flex flex-col justify-center">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-xs font-bold text-gray-500">Teachers Created</h3>
+                        <div class="flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-trending-up w-4 h-4 text-green-600" aria-hidden="true">
+                                <path d="M16 7h6v6"></path>
+                                <path d="m22 7-8.5 8.5-5-5L2 17"></path>
+                            </svg><span class="text-xs font-bold text-green-600">63.64%</span></div>
+                    </div>
+                    <div class="flex items-center justify-between"><span
+                            class="text-2xl font-bold text-gray-900 leading-none">18</span>
+                        <p class="text-[10px] font-bold text-gray-500 text-right leading-snug max-w-[75px]">Increased in
+                            last 30 Days</p>
+                    </div>
+                </div>
+                <div
+                    class="bg-white rounded-lg p-4 pl-4 border-l-[4px] border-green-400 shadow-sm hover:shadow-md transition-shadow min-h-[110px] flex flex-col justify-center">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-xs font-bold text-gray-500">Students Created</h3>
+                        <div class="flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-trending-up w-4 h-4 text-green-600" aria-hidden="true">
+                                <path d="M16 7h6v6"></path>
+                                <path d="m22 7-8.5 8.5-5-5L2 17"></path>
+                            </svg><span class="text-xs font-bold text-green-600">111.11%</span></div>
+                    </div>
+                    <div class="flex items-center justify-between"><span
+                            class="text-2xl font-bold text-gray-900 leading-none">19</span>
+                        <p class="text-[10px] font-bold text-gray-500 text-right leading-snug max-w-[75px]">Increased in
+                            last 30 Days</p>
+                    </div>
+                </div>
+                <div
+                    class="bg-white rounded-lg p-4 pl-4 border-l-[4px] border-blue-400 shadow-sm hover:shadow-md transition-shadow min-h-[110px] flex flex-col justify-center">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-xs font-bold text-gray-500">Parents Created</h3>
+                        <div class="flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-trending-up w-4 h-4 text-green-600" aria-hidden="true">
+                                <path d="M16 7h6v6"></path>
+                                <path d="m22 7-8.5 8.5-5-5L2 17"></path>
+                            </svg><span class="text-xs font-bold text-green-600">100%</span></div>
+                    </div>
+                    <div class="flex items-center justify-between"><span
+                            class="text-2xl font-bold text-gray-900 leading-none">4</span>
+                        <p class="text-[10px] font-bold text-gray-500 text-right leading-snug max-w-[75px]">Increased in
+                            last 30 Days</p>
+                    </div>
+                </div>
+                <div
+                    class="bg-white rounded-lg p-4 pl-4 border-l-[4px] border-red-400 shadow-sm hover:shadow-md transition-shadow min-h-[110px] flex flex-col justify-center">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-xs font-bold text-gray-500">Pending Tickets</h3>
+                        <div class="flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-trending-up w-4 h-4 text-green-600" aria-hidden="true">
+                                <path d="M16 7h6v6"></path>
+                                <path d="m22 7-8.5 8.5-5-5L2 17"></path>
+                            </svg><span class="text-xs font-bold text-green-600">0%</span></div>
+                    </div>
+                    <div class="flex items-center justify-between"><span
+                            class="text-2xl font-bold text-gray-900 leading-none">4</span>
+                        <p class="text-[10px] font-bold text-gray-500 text-right leading-snug max-w-[75px]">Changed in
+                            last 30 Days</p>
+                    </div>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div class="lg:col-span-2">
+                        <div class="bg-white rounded-xl shadow-sm border border-gray-100">
+                            <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100">
+                                <h3 class="text-xl font-bold text-gray-900">Teachers</h3><button
+                                    class="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-lg transition-colors">View
+                                    All</button>
+                            </div>
+                            <div class="overflow-x-auto">
+                                <table class="w-full">
+                                    <thead>
+                                        <tr class="bg-[#EBF5FF]">
+                                            <th
+                                                class="px-6 py-3.5 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                                Name</th>
+                                            <th
+                                                class="px-6 py-3.5 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                                Address</th>
+                                            <th
+                                                class="px-6 py-3.5 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                                Phone Number</th>
+                                            <th
+                                                class="px-6 py-3.5 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                                Verify Status</th>
+                                            <th class="px-6 py-3.5"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-white divide-y divide-gray-100">
+                                        <tr class="hover:bg-gray-100 transition-colors cursor-pointer" role="button">
+                                            <td class="px-6 py-4">
+                                                <div class="flex items-center gap-3">
+                                                    <div class=" ">
+                                                        <div class="p-avatar p-component p-avatar-image p-avatar-circle"
+                                                            data-pc-name="avatar" data-pc-section="root"><img
+                                                                alt="avatar" data-pc-section="image"
+                                                                src="https://fawriistorage.blob.core.windows.net/fawrii/fawrii/1887c1b0-a967-43f3-9094-aa6be487d105.png">
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="text-sm font-semibold text-gray-900">Salim Sumli
+                                                        </div>
+                                                        <div class="text-xs text-gray-500 mt-0.5">bran62@hotrokh.com
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-gray-600">#123</td>
+                                            <td class="px-6 py-4 text-sm text-gray-600">N/A</td>
+                                            <td class="px-6 py-4"><span
+                                                    class="inline-flex items-center justify-center px-4 py-1.5 rounded-full text-xs font-semibold min-w-[60px] bg-green-100 text-green-700 border border-green-300">Yes</span>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <div class="relative flex justify-end"><button type="button"
+                                                        class="p-1.5 hover:bg-gray-100 rounded-lg transition-colors"><svg
+                                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide lucide-ellipsis-vertical w-4 h-4 text-gray-400"
+                                                            aria-hidden="true">
+                                                            <circle cx="12" cy="12" r="1"></circle>
+                                                            <circle cx="12" cy="5" r="1"></circle>
+                                                            <circle cx="12" cy="19" r="1"></circle>
+                                                        </svg></button></div>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-100 transition-colors cursor-pointer" role="button">
+                                            <td class="px-6 py-4">
+                                                <div class="flex items-center gap-3">
+                                                    <div class=" ">
+                                                        <div class="p-avatar p-component p-avatar-image p-avatar-circle"
+                                                            data-pc-name="avatar" data-pc-section="root"><img
+                                                                alt="avatar" data-pc-section="image"
+                                                                src="https://fawriistorage.blob.core.windows.net/fawrii/fawrii/0d81bbbb-9102-4778-bfc7-c8b53e63161c.png">
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="text-sm font-semibold text-gray-900">Sameer Shahzad
+                                                        </div>
+                                                        <div class="text-xs text-gray-500 mt-0.5">
+                                                            gucevihacusa@dollicons.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-gray-600">Mall Road 123</td>
+                                            <td class="px-6 py-4 text-sm text-gray-600">N/A</td>
+                                            <td class="px-6 py-4"><span
+                                                    class="inline-flex items-center justify-center px-4 py-1.5 rounded-full text-xs font-semibold min-w-[60px] bg-green-100 text-green-700 border border-green-300">Yes</span>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <div class="relative flex justify-end"><button type="button"
+                                                        class="p-1.5 hover:bg-gray-100 rounded-lg transition-colors"><svg
+                                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide lucide-ellipsis-vertical w-4 h-4 text-gray-400"
+                                                            aria-hidden="true">
+                                                            <circle cx="12" cy="12" r="1"></circle>
+                                                            <circle cx="12" cy="5" r="1"></circle>
+                                                            <circle cx="12" cy="19" r="1"></circle>
+                                                        </svg></button></div>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-100 transition-colors cursor-pointer" role="button">
+                                            <td class="px-6 py-4">
+                                                <div class="flex items-center gap-3">
+                                                    <div class=" ">
+                                                        <div class="p-avatar p-component p-avatar-image p-avatar-circle"
+                                                            data-pc-name="avatar" data-pc-section="root"><img
+                                                                alt="avatar" data-pc-section="image"
+                                                                src="https://fawriistorage.blob.core.windows.net/fawrii/fawrii/c4fcf442-cc44-49fa-ba72-5ce54f2f0635.png">
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="text-sm font-semibold text-gray-900">George Rushton
+                                                        </div>
+                                                        <div class="text-xs text-gray-500 mt-0.5">nikofem591@hutudns.com
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-gray-600">GTest Test Address</td>
+                                            <td class="px-6 py-4 text-sm text-gray-600">N/A</td>
+                                            <td class="px-6 py-4"><span
+                                                    class="inline-flex items-center justify-center px-4 py-1.5 rounded-full text-xs font-semibold min-w-[60px] bg-green-100 text-green-700 border border-green-300">Yes</span>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <div class="relative flex justify-end"><button type="button"
+                                                        class="p-1.5 hover:bg-gray-100 rounded-lg transition-colors"><svg
+                                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide lucide-ellipsis-vertical w-4 h-4 text-gray-400"
+                                                            aria-hidden="true">
+                                                            <circle cx="12" cy="12" r="1"></circle>
+                                                            <circle cx="12" cy="5" r="1"></circle>
+                                                            <circle cx="12" cy="19" r="1"></circle>
+                                                        </svg></button></div>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-100 transition-colors cursor-pointer" role="button">
+                                            <td class="px-6 py-4">
+                                                <div class="flex items-center gap-3">
+                                                    <div class=" ">
+                                                        <div class="p-avatar p-component p-avatar-image p-avatar-circle"
+                                                            data-pc-name="avatar" data-pc-section="root"><img
+                                                                alt="avatar" data-pc-section="image"
+                                                                src="https://fawriistorage.blob.core.windows.net/fawrii/fawrii/bc068e5d-78c2-4201-a141-ca7de87d053d.png">
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="text-sm font-semibold text-gray-900">Sara Ahmed
+                                                        </div>
+                                                        <div class="text-xs text-gray-500 mt-0.5">scud@hrvk.xyz</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-gray-600">45 Oxford Street, Manchester, UK
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-gray-600">N/A</td>
+                                            <td class="px-6 py-4"><span
+                                                    class="inline-flex items-center justify-center px-4 py-1.5 rounded-full text-xs font-semibold min-w-[60px] bg-green-100 text-green-700 border border-green-300">Yes</span>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <div class="relative flex justify-end"><button type="button"
+                                                        class="p-1.5 hover:bg-gray-100 rounded-lg transition-colors"><svg
+                                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide lucide-ellipsis-vertical w-4 h-4 text-gray-400"
+                                                            aria-hidden="true">
+                                                            <circle cx="12" cy="12" r="1"></circle>
+                                                            <circle cx="12" cy="5" r="1"></circle>
+                                                            <circle cx="12" cy="19" r="1"></circle>
+                                                        </svg></button></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                            <div class="flex items-center justify-between mb-6">
+                                <h3 class="text-xl font-bold text-gray-900">Lesson Hours</h3><button
+                                    class="flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-gray-700 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-lg transition-colors"><span>6
+                                        mn</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-chevron-down w-4 h-4" aria-hidden="true">
+                                        <path d="m6 9 6 6 6-6"></path>
+                                    </svg></button>
+                            </div>
+                            <div class="h-48 relative"><svg class="w-full h-full" viewBox="0 0 400 160"
+                                    preserveAspectRatio="none">
+                                    <path d="M 0,120 Q 50,100 100,90 T 200,70 T 300,60 T 400,50" fill="none"
+                                        stroke="#FF8A3D" stroke-width="3" class="drop-shadow-sm"></path>
+                                    <path d="M 0,120 Q 50,100 100,90 T 200,70 T 300,60 T 400,50 L 400,160 L 0,160 Z"
+                                        fill="url(#gradient)" opacity="0.1"></path>
+                                    <defs>
+                                        <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                            <stop offset="0%" stop-color="#FF8A3D" stop-opacity="0.3"></stop>
+                                            <stop offset="100%" stop-color="#FF8A3D" stop-opacity="0"></stop>
+                                        </linearGradient>
+                                    </defs>
+                                </svg></div>
+                            <div class="flex items-center justify-between mt-4 text-xs text-gray-500 font-medium">
+                                <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div class="lg:col-span-2">
+                        <div class="bg-white rounded-xl shadow-sm border border-gray-100">
+                            <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100">
+                                <h3 class="text-xl font-bold text-gray-900">Students</h3><button
+                                    class="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-lg transition-colors">View
+                                    All</button>
+                            </div>
+                            <div class="overflow-x-auto">
+                                <table class="w-full">
+                                    <thead>
+                                        <tr class="bg-[#EBF5FF]">
+                                            <th
+                                                class="px-6 py-3.5 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                                Name</th>
+                                            <th
+                                                class="px-6 py-3.5 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                                Address</th>
+                                            <th
+                                                class="px-6 py-3.5 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                                Phone Number</th>
+                                            <th
+                                                class="px-6 py-3.5 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                                Verify Status</th>
+                                            <th class="px-6 py-3.5"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-white divide-y divide-gray-100">
+                                        <tr class="hover:bg-gray-100 transition-colors cursor-pointer" role="button">
+                                            <td class="px-6 py-4">
+                                                <div class="flex items-center gap-3">
+                                                    <div class=" ">
+                                                        <div class="p-avatar p-component p-avatar-image p-avatar-circle"
+                                                            data-pc-name="avatar" data-pc-section="root"><img
+                                                                alt="avatar" data-pc-section="image"
+                                                                src="https://fawriistorage.blob.core.windows.net/fawrii/fawrii/286d6ee0-9640-423a-b081-599c60ac66c0.png">
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="text-sm font-semibold text-gray-900">Somali Jain
+                                                        </div>
+                                                        <div class="text-xs text-gray-500 mt-0.5">eziizi@quyinvis.net
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-gray-600">N/A</td>
+                                            <td class="px-6 py-4 text-sm text-gray-600">N/A</td>
+                                            <td class="px-6 py-4"><span
+                                                    class="inline-flex items-center justify-center px-4 py-1.5 rounded-full text-xs font-semibold min-w-[60px] bg-green-100 text-green-700 border border-green-300">Yes</span>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <div class="relative flex justify-end"><button type="button"
+                                                        class="p-1.5 hover:bg-gray-100 rounded-lg transition-colors"><svg
+                                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide lucide-ellipsis-vertical w-4 h-4 text-gray-400"
+                                                            aria-hidden="true">
+                                                            <circle cx="12" cy="12" r="1"></circle>
+                                                            <circle cx="12" cy="5" r="1"></circle>
+                                                            <circle cx="12" cy="19" r="1"></circle>
+                                                        </svg></button></div>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-100 transition-colors cursor-pointer" role="button">
+                                            <td class="px-6 py-4">
+                                                <div class="flex items-center gap-3">
+                                                    <div class=" ">
+                                                        <div class="p-avatar p-component p-avatar-image p-avatar-circle"
+                                                            data-pc-name="avatar" data-pc-section="root"><img
+                                                                alt="avatar" data-pc-section="image"
+                                                                src="https://fawriistorage.blob.core.windows.net/fawrii/fawrii/97369a63-feea-4075-a53e-a4a04df7125f.png">
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="text-sm font-semibold text-gray-900">Somali Jain
+                                                        </div>
+                                                        <div class="text-xs text-gray-500 mt-0.5">
+                                                            mashalnysh9a3@googl.win</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-gray-600">N/A</td>
+                                            <td class="px-6 py-4 text-sm text-gray-600">N/A</td>
+                                            <td class="px-6 py-4"><span
+                                                    class="inline-flex items-center justify-center px-4 py-1.5 rounded-full text-xs font-semibold min-w-[60px] bg-green-100 text-green-700 border border-green-300">Yes</span>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <div class="relative flex justify-end"><button type="button"
+                                                        class="p-1.5 hover:bg-gray-100 rounded-lg transition-colors"><svg
+                                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide lucide-ellipsis-vertical w-4 h-4 text-gray-400"
+                                                            aria-hidden="true">
+                                                            <circle cx="12" cy="12" r="1"></circle>
+                                                            <circle cx="12" cy="5" r="1"></circle>
+                                                            <circle cx="12" cy="19" r="1"></circle>
+                                                        </svg></button></div>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-100 transition-colors cursor-pointer" role="button">
+                                            <td class="px-6 py-4">
+                                                <div class="flex items-center gap-3">
+                                                    <div class=" ">
+                                                        <div class="p-avatar p-component p-avatar-image p-avatar-circle"
+                                                            data-pc-name="avatar" data-pc-section="root"><img
+                                                                alt="avatar" data-pc-section="image"
+                                                                src="https://fawriistorage.blob.core.windows.net/fawrii/fawrii/026900b8-f50d-41cd-b88d-04c5a8e427d5.png">
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="text-sm font-semibold text-gray-900">Sagy Salia
+                                                        </div>
+                                                        <div class="text-xs text-gray-500 mt-0.5">
+                                                            saanaaaa97531@gmail.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-gray-600">N/A</td>
+                                            <td class="px-6 py-4 text-sm text-gray-600">N/A</td>
+                                            <td class="px-6 py-4"><span
+                                                    class="inline-flex items-center justify-center px-4 py-1.5 rounded-full text-xs font-semibold min-w-[60px] bg-green-100 text-green-700 border border-green-300">Yes</span>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <div class="relative flex justify-end"><button type="button"
+                                                        class="p-1.5 hover:bg-gray-100 rounded-lg transition-colors"><svg
+                                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide lucide-ellipsis-vertical w-4 h-4 text-gray-400"
+                                                            aria-hidden="true">
+                                                            <circle cx="12" cy="12" r="1"></circle>
+                                                            <circle cx="12" cy="5" r="1"></circle>
+                                                            <circle cx="12" cy="19" r="1"></circle>
+                                                        </svg></button></div>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-100 transition-colors cursor-pointer" role="button">
+                                            <td class="px-6 py-4">
+                                                <div class="flex items-center gap-3">
+                                                    <div class=" ">
+                                                        <div class="p-avatar p-component p-avatar-image p-avatar-circle"
+                                                            data-pc-name="avatar" data-pc-section="root"><img
+                                                                alt="avatar" data-pc-section="image"
+                                                                src="https://fawriistorage.blob.core.windows.net/fawrii/fawrii/631f19e0-899f-468f-a864-20d0ffd75d02.png">
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="text-sm font-semibold text-gray-900">Saria Saleem
+                                                        </div>
+                                                        <div class="text-xs text-gray-500 mt-0.5">
+                                                            saanaaaaa97531@gmail.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-gray-600">N/A</td>
+                                            <td class="px-6 py-4 text-sm text-gray-600">N/A</td>
+                                            <td class="px-6 py-4"><span
+                                                    class="inline-flex items-center justify-center px-4 py-1.5 rounded-full text-xs font-semibold min-w-[60px] bg-red-100 text-red-700 border border-red-300">No</span>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <div class="relative flex justify-end"><button type="button"
+                                                        class="p-1.5 hover:bg-gray-100 rounded-lg transition-colors"><svg
+                                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide lucide-ellipsis-vertical w-4 h-4 text-gray-400"
+                                                            aria-hidden="true">
+                                                            <circle cx="12" cy="12" r="1"></circle>
+                                                            <circle cx="12" cy="5" r="1"></circle>
+                                                            <circle cx="12" cy="19" r="1"></circle>
+                                                        </svg></button></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                            <div class="flex items-center justify-between mb-6">
+                                <h3 class="text-xl font-bold text-gray-900">New Classes</h3><button
+                                    class="flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-gray-700 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-lg transition-colors"><span>6
+                                        mn</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-chevron-down w-4 h-4" aria-hidden="true">
+                                        <path d="m6 9 6 6 6-6"></path>
+                                    </svg></button>
+                            </div>
+                            <div class="h-48 relative"><svg class="w-full h-full" viewBox="0 0 400 160"
+                                    preserveAspectRatio="none">
+                                    <path d="M 0,120 Q 50,100 100,90 T 200,70 T 300,60 T 400,50" fill="none"
+                                        stroke="#FF8A3D" stroke-width="3" class="drop-shadow-sm"></path>
+                                    <path d="M 0,120 Q 50,100 100,90 T 200,70 T 300,60 T 400,50 L 400,160 L 0,160 Z"
+                                        fill="url(#gradient)" opacity="0.1"></path>
+                                    <defs>
+                                        <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                            <stop offset="0%" stop-color="#FF8A3D" stop-opacity="0.3"></stop>
+                                            <stop offset="100%" stop-color="#FF8A3D" stop-opacity="0"></stop>
+                                        </linearGradient>
+                                    </defs>
+                                </svg></div>
+                            <div class="flex items-center justify-between mt-4 text-xs text-gray-500 font-medium">
+                                <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div class="lg:col-span-2">
+                        <div class="bg-white rounded-xl shadow-sm border border-gray-100">
+                            <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100">
+                                <h3 class="text-xl font-bold text-gray-900">Parents</h3><button
+                                    class="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-lg transition-colors">View
+                                    All</button>
+                            </div>
+                            <div class="overflow-x-auto">
+                                <table class="w-full">
+                                    <thead>
+                                        <tr class="bg-[#EBF5FF]">
+                                            <th
+                                                class="px-6 py-3.5 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                                Name</th>
+                                            <th
+                                                class="px-6 py-3.5 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                                Address</th>
+                                            <th
+                                                class="px-6 py-3.5 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                                Phone Number</th>
+                                            <th
+                                                class="px-6 py-3.5 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                                Verify Status</th>
+                                            <th class="px-6 py-3.5"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-white divide-y divide-gray-100">
+                                        <tr class="hover:bg-gray-100 transition-colors cursor-pointer" role="button">
+                                            <td class="px-6 py-4">
+                                                <div class="flex items-center gap-3">
+                                                    <div class=" ">
+                                                        <div class="p-avatar p-component p-avatar-image p-avatar-circle"
+                                                            data-pc-name="avatar" data-pc-section="root"><img
+                                                                alt="avatar" data-pc-section="image"
+                                                                src="https://fawriistorage.blob.core.windows.net/fawrii/fawrii/9dfebe5c-fc6d-41c9-8946-be5fe125259c.png">
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="text-sm font-semibold text-gray-900">Mohammed
+                                                            Hussain</div>
+                                                        <div class="text-xs text-gray-500 mt-0.5">mmhuk80@gmail.com
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-gray-600">N/A</td>
+                                            <td class="px-6 py-4 text-sm text-gray-600">N/A</td>
+                                            <td class="px-6 py-4"><span
+                                                    class="inline-flex items-center justify-center px-4 py-1.5 rounded-full text-xs font-semibold min-w-[60px] bg-green-100 text-green-700 border border-green-300">Yes</span>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <div class="relative flex justify-end"><button type="button"
+                                                        class="p-1.5 hover:bg-gray-100 rounded-lg transition-colors"><svg
+                                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide lucide-ellipsis-vertical w-4 h-4 text-gray-400"
+                                                            aria-hidden="true">
+                                                            <circle cx="12" cy="12" r="1"></circle>
+                                                            <circle cx="12" cy="5" r="1"></circle>
+                                                            <circle cx="12" cy="19" r="1"></circle>
+                                                        </svg></button></div>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-100 transition-colors cursor-pointer" role="button">
+                                            <td class="px-6 py-4">
+                                                <div class="flex items-center gap-3">
+                                                    <div class=" ">
+                                                        <div class="p-avatar p-component p-avatar-image p-avatar-circle"
+                                                            data-pc-name="avatar" data-pc-section="root"><img
+                                                                alt="avatar" data-pc-section="image"
+                                                                src="https://fawriistorage.blob.core.windows.net/fawrii/fawrii/c9e41491-a7c9-4b65-a9d1-a861ab3c90a7.png">
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="text-sm font-semibold text-gray-900">George father
+                                                        </div>
+                                                        <div class="text-xs text-gray-500 mt-0.5">femidop406@hutudns.com
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-gray-600">N/A</td>
+                                            <td class="px-6 py-4 text-sm text-gray-600">N/A</td>
+                                            <td class="px-6 py-4"><span
+                                                    class="inline-flex items-center justify-center px-4 py-1.5 rounded-full text-xs font-semibold min-w-[60px] bg-green-100 text-green-700 border border-green-300">Yes</span>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <div class="relative flex justify-end"><button type="button"
+                                                        class="p-1.5 hover:bg-gray-100 rounded-lg transition-colors"><svg
+                                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide lucide-ellipsis-vertical w-4 h-4 text-gray-400"
+                                                            aria-hidden="true">
+                                                            <circle cx="12" cy="12" r="1"></circle>
+                                                            <circle cx="12" cy="5" r="1"></circle>
+                                                            <circle cx="12" cy="19" r="1"></circle>
+                                                        </svg></button></div>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-100 transition-colors cursor-pointer" role="button">
+                                            <td class="px-6 py-4">
+                                                <div class="flex items-center gap-3">
+                                                    <div class=" ">
+                                                        <div class="p-avatar p-component p-avatar-image p-avatar-circle"
+                                                            data-pc-name="avatar" data-pc-section="root"><img
+                                                                alt="avatar" data-pc-section="image"
+                                                                src="https://ui-avatars.com/api/?name=Test +By Umar&amp;background=FA6F43&amp;color=fff&amp;size=200">
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="text-sm font-semibold text-gray-900">Test By Umar
+                                                        </div>
+                                                        <div class="text-xs text-gray-500 mt-0.5">testbyumar@gmail.com
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-gray-600">N/A</td>
+                                            <td class="px-6 py-4 text-sm text-gray-600">N/A</td>
+                                            <td class="px-6 py-4"><span
+                                                    class="inline-flex items-center justify-center px-4 py-1.5 rounded-full text-xs font-semibold min-w-[60px] bg-green-100 text-green-700 border border-green-300">Yes</span>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <div class="relative flex justify-end"><button type="button"
+                                                        class="p-1.5 hover:bg-gray-100 rounded-lg transition-colors"><svg
+                                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide lucide-ellipsis-vertical w-4 h-4 text-gray-400"
+                                                            aria-hidden="true">
+                                                            <circle cx="12" cy="12" r="1"></circle>
+                                                            <circle cx="12" cy="5" r="1"></circle>
+                                                            <circle cx="12" cy="19" r="1"></circle>
+                                                        </svg></button></div>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-100 transition-colors cursor-pointer" role="button">
+                                            <td class="px-6 py-4">
+                                                <div class="flex items-center gap-3">
+                                                    <div class=" ">
+                                                        <div class="p-avatar p-component p-avatar-image p-avatar-circle"
+                                                            data-pc-name="avatar" data-pc-section="root"><img
+                                                                alt="avatar" data-pc-section="image"
+                                                                src="https://fawriistorage.blob.core.windows.net/fawrii/fawrii/1cdba6b3-858e-477c-b74a-030be14134d5.png">
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="text-sm font-semibold text-gray-900">Ayaan Ahmed
+                                                        </div>
+                                                        <div class="text-xs text-gray-500 mt-0.5">nseek@flywaverun.com
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-gray-600">N/A</td>
+                                            <td class="px-6 py-4 text-sm text-gray-600">N/A</td>
+                                            <td class="px-6 py-4"><span
+                                                    class="inline-flex items-center justify-center px-4 py-1.5 rounded-full text-xs font-semibold min-w-[60px] bg-green-100 text-green-700 border border-green-300">Yes</span>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <div class="relative flex justify-end"><button type="button"
+                                                        class="p-1.5 hover:bg-gray-100 rounded-lg transition-colors"><svg
+                                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide lucide-ellipsis-vertical w-4 h-4 text-gray-400"
+                                                            aria-hidden="true">
+                                                            <circle cx="12" cy="12" r="1"></circle>
+                                                            <circle cx="12" cy="5" r="1"></circle>
+                                                            <circle cx="12" cy="19" r="1"></circle>
+                                                        </svg></button></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                            <div class="flex items-center justify-between mb-6">
+                                <h3 class="text-xl font-bold text-gray-900">New Users</h3><button
+                                    class="flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-gray-700 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-lg transition-colors"><span>6
+                                        mn</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-chevron-down w-4 h-4" aria-hidden="true">
+                                        <path d="m6 9 6 6 6-6"></path>
+                                    </svg></button>
+                            </div>
+                            <div class="h-48 relative"><svg class="w-full h-full" viewBox="0 0 400 160"
+                                    preserveAspectRatio="none">
+                                    <path d="M 0,120 Q 50,100 100,90 T 200,70 T 300,60 T 400,50" fill="none"
+                                        stroke="#FF8A3D" stroke-width="3" class="drop-shadow-sm"></path>
+                                    <path d="M 0,120 Q 50,100 100,90 T 200,70 T 300,60 T 400,50 L 400,160 L 0,160 Z"
+                                        fill="url(#gradient)" opacity="0.1"></path>
+                                    <defs>
+                                        <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                            <stop offset="0%" stop-color="#FF8A3D" stop-opacity="0.3"></stop>
+                                            <stop offset="100%" stop-color="#FF8A3D" stop-opacity="0"></stop>
+                                        </linearGradient>
+                                    </defs>
+                                </svg></div>
+                            <div class="flex items-center justify-between mt-4 text-xs text-gray-500 font-medium">
+                                <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
