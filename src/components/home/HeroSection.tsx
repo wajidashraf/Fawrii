@@ -4,7 +4,7 @@ import { heroContent } from "@/content/homepage";
 
 // TODO: Replace with real Fawrii hero image
 const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80";
+  "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&q=80";
 
 export function HeroSection() {
   return (
@@ -32,8 +32,8 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Hero image — hidden on mobile per brief (copy-first) */}
-          <div className="hidden lg:block rounded-2xl overflow-hidden bg-background-alt">
+          {/* Hero image */}
+          <div className="rounded-2xl overflow-hidden bg-background-alt">
             <Image
               src={HERO_IMAGE}
               alt="A professional tutor working from a calm home environment"
