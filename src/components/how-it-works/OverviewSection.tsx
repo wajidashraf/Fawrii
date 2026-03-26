@@ -28,7 +28,7 @@ export function OverviewSection() {
       </p>
 
       {/* 4-Step Journey Timeline */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-0 mb-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
         {journeyDiagramSteps.map((item, index) => (
           <div key={item.step} className="relative flex lg:flex-col items-stretch">
             {/* Card */}
