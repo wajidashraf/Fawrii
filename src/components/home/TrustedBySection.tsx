@@ -22,18 +22,20 @@ export function TrustedBySection() {
           {trustedByContent.subIntro}
         </p>
 
-        {/* Trust signals — compact list per brief */}
-        <ul className="space-y-2.5 mb-6">
-          {trustedByContent.bullets.map((item) => (
-            <li
-              key={item}
-              className="flex items-start gap-3 text-foreground-muted text-[15px] sm:text-base leading-relaxed"
-            >
-              <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-accent mt-2" />
-              {item}
-            </li>
-          ))}
-        </ul>
+        {/* Trust signals — compact list in callout card */}
+        <div className="rounded-xl bg-background-alt border border-border p-5 sm:p-6 mb-6">
+          <ul className="space-y-2.5">
+            {trustedByContent.bullets.map((item) => (
+              <li
+                key={item}
+                className="flex items-start gap-3 text-foreground-muted text-[15px] sm:text-base leading-relaxed"
+              >
+                <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-accent mt-2" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
 
         {/* Closing — reassurance */}
         <p className="text-foreground-muted text-[15px] sm:text-base leading-relaxed">
