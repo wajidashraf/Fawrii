@@ -1,0 +1,289 @@
+FAWRII WEBSITE PROJECT CONTEXT
+
+Purpose
+- This file stores the main working context, design decisions, implementation patterns, and recent project history for the Fawrii website so future work can continue consistently.
+
+Project overview
+- The website is being refined into a polished, professional, tutor-first education platform.
+- Main priorities have been:
+  - clean and maintainable implementation
+  - consistent full-width layout across pages
+  - strong visual hierarchy
+  - compact, elegant spacing
+  - responsive design across devices
+  - better cross-browser consistency
+  - consistent theme and component styling
+
+Core layout decisions
+- Full-width section standard:
+  - Main content sections have been standardized to the widest site width.
+  - Current standard is max-w-[90rem] / 7.5xl.
+- This width is considered final for now unless changed intentionally later.
+- Shared section spacing was tightened to make pages feel more premium and less loose.
+
+Theme and design system decisions
+- The site theme was aligned to the Fawrii branding extracted from docs/test.html.
+- Key brand directions:
+  - primary brand color uses teal tones
+  - accent color uses orange
+  - surfaces and borders were refined for softer but clearer contrast
+  - shadows were refined to feel subtle and elegant rather than heavy
+- CTA buttons were intentionally reduced in size by about 10 percent from earlier versions.
+- The visual goal is:
+  - compact
+  - elegant
+  - modern
+  - professional
+  - high trust
+
+Typography and hierarchy decisions
+- Headings should feel strong and editorial, but not oversized.
+- Supporting copy should stay readable with controlled line length.
+- Sections now commonly use this hierarchy:
+  - section heading
+  - one bold key statement or transition sentence
+  - supporting muted body text
+  - bullets or supporting points inside a callout card where appropriate
+  - emphasized closing takeaway
+  - CTA
+
+Global styling direction
+- Card and panel styling across the site was refined with:
+  - subtle border
+  - soft shadow at rest
+  - slightly stronger shadow on hover
+  - smooth transition
+- Video embeds and image blocks were also updated to fit the same visual language.
+- Cross-browser CSS resets were added for stability, including improvements for Safari and mobile behavior.
+- Mobile touch targets were increased where needed.
+
+Important UI patterns currently in use
+
+1. Section widths
+- Prefer shared wrappers and keep sections aligned to max-w-[90rem].
+
+2. Card style
+- Rounded corners
+- Light border
+- Soft shadow-sm base
+- hover:shadow-md
+- Smooth transition-shadow or transition-all
+- Use surface/background-alt depending on contrast needs
+
+3. Section content pattern
+- For informational sections, the preferred structure is:
+  - heading
+  - bold intro or key statement
+  - callout card or structured list
+  - emphasized closing line
+  - CTA or supporting link
+
+4. Bullet list dot color
+- Bullet dots across home page lists were standardized to orange accent.
+- Use bg-accent for bullet dots for consistency.
+- If new list dots are added, they should match this standard unless there is a deliberate reason not to.
+
+5. Trusted/signal pills
+- Short trust indicators can be presented as rounded inline pills instead of traditional stacked lists when that better suits the content.
+
+6. Flow cards
+- Left-to-right process visuals are used where they help communicate progression.
+- Reference pattern originally came from the pay-and-rules page platform handling/deductions flow.
+- Similar step-flow visuals were requested for:
+  - tutoring-on-fawrii page: Apply > Review > Onboard
+  - safeguarding page: Issue raised > Review > Resolution
+
+Major completed work history
+
+1. Full-width layout standardization
+- Multiple pages and components were updated so major sections consistently use the maximum site width.
+- This was rolled out across the website, not just the home page.
+
+2. Site-wide elegance and shadow refinement
+- Shared components and page cards received refined shadows and hover states.
+- Goal was to improve depth and quality without changing the overall brand personality.
+
+3. Home page responsiveness and cross-browser review
+- The home page was reviewed against the brief.
+- Responsive improvements were made for mobile and other screen sizes.
+- Cross-browser consistency fixes were added.
+- The header was updated with a proper mobile hamburger/drawer pattern.
+
+4. Home page content alignment with brief
+- The home page was reviewed against HOME PAGE BRIEF.docx.
+- The page was refined to better match the intended messaging and presentation.
+
+5. Theme extraction and unification
+- Theme cues were extracted from docs/test.html.
+- Brand colors and overall visual style were aligned to those cues.
+- Hardcoded older colors were replaced or planned for replacement.
+
+6. Director video section fix
+- A global CSS issue caused the video/iframe area to collapse visually.
+- That issue was fixed so the media fills its section correctly again.
+
+7. Home page design refinement
+- Home page sections were progressively tightened and polished.
+- CTA sizing, spacing, and typography were refined.
+- Goal was a more premium, less bulky page.
+
+8. Why Fawrii Exists redesign
+- This section was redesigned to improve hierarchy.
+- Pain points were moved into a distinct callout card.
+- The transition sentence was emphasized.
+- Supporting copy was separated into clearer layers.
+
+9. How Tutors Work On Fawrii redesign
+- This section was redesigned similarly to Why Fawrii Exists.
+- The three formats were presented as individual refined cards.
+- A stronger intro and stronger closing takeaway were added.
+
+10. Additional home page section redesigns
+- The following home sections were redesigned using the same hierarchy principles:
+  - Pay, Control and Flexibility
+  - Trust, Safeguarding & Support
+  - Who Fawrii is built for
+  - Trusted by parents and schools
+- These sections now use stronger intros, clearer grouping, and more deliberate emphasis.
+
+11. Home page bullet dot standardization
+- Bullet/list dots on the home page were standardized to the orange accent color for consistency.
+- Shared list styling was also updated so reused bullet lists align with that pattern.
+
+Home page design rules to preserve
+- Keep the page visually compact.
+- Avoid oversized buttons and oversized empty spacing.
+- Prefer strong hierarchy rather than large volume of text competing equally.
+- Use callout cards where they clarify a group of points.
+- Keep the tone trustworthy, calm, professional, and supportive.
+- Preserve mobile responsiveness and cross-browser consistency.
+
+Component and implementation notes
+- Shared UI building blocks (src/components/ui/) include:
+  - SectionWrapper
+  - SectionHeading
+  - FeatureCard
+  - TextCta
+  - BulletList
+  - IconBulletList (icon + label + description list)
+  - TickList (green check-mark list)
+  - PrimaryButton (no shadow, brief-compliant CTA)
+  - StepBadge (numbered step indicator reused across how-it-works)
+  - VideoEmbed
+  - FaqAccordion
+  - Button
+- Some sections moved away from generic shared components when a more custom hierarchy was needed.
+- That is acceptable if the section becomes clearer and still stays consistent with the overall design system.
+
+Important page-specific notes
+
+Home page
+- Fully redesigned with componentised sections under src/components/home/.
+- Components: HeroSection, WhyFawriiSection, HowTutorsWorkSection, PayControlSection, TrustSafeguardingSection, WhoFawriiIsForSection, TrustedBySection, DirectorVideoSection, FinalCtaSection.
+- Hero uses single-column, copy-forward layout with responsive hero image (always visible) and 10px word-spacing on heading.
+- TrustedBySection uses a simple bullet list (quiet confidence marker, not pill badges).
+- SectionHeading sizes are text-3xl sm:text-4xl per brief.
+- Bullet dots on home page remain orange accent.
+
+How-it-works page
+- Fully redesigned. Monolithic page.tsx replaced with clean composition of extracted components.
+- Components under src/components/how-it-works/:
+  - HeroSection, OverviewSection, Step1Section, Step2Section, Step3Section, Step4Section, SafeguardingSection, TrustSection, FinalCtaSection.
+- Uses shared StepBadge component for step indicators.
+- All sections use SectionWrapper for consistent spacing and bg alternation.
+- Design aligned with homepage section patterns.
+
+Tutoring-on-fawrii page
+- Fully redesigned from brief (6. TUTORING ON FAWRII BRIEF AND COPY.pdf).
+- Components under src/components/tutoring-on-fawrii/:
+  - HeroSection, WhyTutorsChooseSection, InControlSection, HowYouWorkSection, BuiltForProfessionalsSection, ProfessionalStandardsSection, TrustedBySection, DirectorVideoSection, FinalCtaSection.
+- Page file is a clean composition importing these components.
+
+About page
+- Fully redesigned from brief (7. ABOUT FAWRII BRIEF AND COPY.pdf).
+- Components under src/components/about/:
+  - HeroSection, DirectorVideoSection, WhyFawriiExistsSection, MissionValuesSection, WhosBehindSection, HowWeSeeTutorsSection, LongTermVisionSection, ParentReassuranceSection, FinalCtaSection.
+- Page file is a clean composition importing these components.
+
+Other pages (faq, pay-and-rules, safeguarding)
+- Refactored to use shared UI components (PrimaryButton, TextCta, BulletList, IconBulletList, TickList).
+- Duplicated local component definitions removed in favour of shared imports.
+
+Known implementation preferences
+- Prefer reusable clean patterns, but do not force abstraction when a clearer section-specific implementation is better.
+- Prefer visually cohesive UI over overly generic markup.
+- Keep code maintainable and easy to extend.
+- Avoid unnecessary complexity.
+- Maintain professional modern UI/UX standards.
+
+Validation history
+- Multiple rounds of typecheck/build validation were run during the work.
+- One build issue encountered was a OneDrive/Windows EPERM file lock on the .next directory, which was environmental rather than a code logic issue.
+
+Major completed work (recent)
+
+12. Shared UI component library expansion
+- Created IconBulletList, TickList, PrimaryButton, StepBadge in src/components/ui/.
+- PrimaryButton has no shadow per brief requirement.
+- TickList uses green semantic check marks.
+
+13. How-it-works page full redesign
+- Monolithic 365-line page extracted into 9 section components.
+- Uses shared UI patterns and StepBadge for step indicators.
+- Consistent spacing and styling with homepage.
+
+14. Tutoring-on-fawrii page full redesign
+- Built from brief document with 9 section components.
+- Clean composition page file.
+
+15. About page full redesign
+- Built from brief document with 9 section components.
+- Clean composition page file.
+
+16. Other page refactoring (faq, pay-and-rules, safeguarding)
+- Replaced duplicated local component definitions with shared UI imports.
+
+17. Mobile menu and header fixes
+- Fixed transparent background issue with solid backgroundColor via inline style.
+- Fixed drawer opening by default — reverted to useState with effect to close on route change.
+
+18. Homepage hero image
+- Added responsive Next.js Image component in hero section.
+- Two-column layout on large screens, stacked on smaller.
+- Image always visible (not hidden on any screen).
+- 10px word-spacing on hero heading.
+
+19. Git configuration
+- Added Fawrii docs/ folder to .gitignore.
+
+Remaining or likely next work
+- Check for any remaining hardcoded old theme colors and align to current design system.
+- Continue reviewing page-by-page consistency in:
+  - spacing
+  - heading hierarchy
+  - CTA sizing
+  - card surfaces
+  - bullet styling
+  - responsive behavior
+- Review remaining pages (contact, pricing, subjects, tutors) for potential redesign.
+- Address any .env security concerns (should not be in version control).
+
+Practical rules for future edits
+- If editing a section, preserve the established visual system first.
+- Before introducing a new pattern, check whether one of these existing patterns already solves it:
+  - callout card
+  - numbered/step card
+  - inline trust pills
+  - emphasized intro + muted support copy
+  - emphasized closing takeaway
+- Keep max width aligned with the site-wide standard.
+- Use orange accent for list dots when consistency with current home-page direction is needed.
+- Validate with typecheck after substantive changes.
+
+Recommended future context usage
+- Use this file as a quick memory of:
+  - what has been changed
+  - why those changes were made
+  - what patterns should stay consistent
+  - what work is still pending
+

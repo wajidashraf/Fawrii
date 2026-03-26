@@ -16,8 +16,13 @@ export function HowWeSeeTutorsSection() {
           {section4Content.headline}
         </SectionHeading>
 
+        {/* First paragraph — bold positioning statement */}
+        <p className="text-foreground font-semibold text-base sm:text-[17px] mb-5">
+          {section4Content.body[0]}
+        </p>
+
         <div className="space-y-5 mb-8">
-          {section4Content.body.map((p) => (
+          {section4Content.body.slice(1).map((p) => (
             <p
               key={p}
               className="text-foreground-muted text-base sm:text-lg leading-relaxed"

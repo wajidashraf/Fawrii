@@ -22,18 +22,18 @@ export function LongTermVisionSection() {
           {section5Content.subHeading}
         </h3>
 
-        <BulletList items={section5Content.bullets} className="space-y-3 mb-8" />
-
-        <div className="space-y-3 mb-8">
-          {section5Content.closing.map((p) => (
-            <p
-              key={p}
-              className="text-foreground-muted text-base sm:text-lg leading-relaxed"
-            >
-              {p}
-            </p>
-          ))}
+        {/* Callout card for focus areas — matches homepage card-box pattern */}
+        <div className="rounded-xl bg-background-alt border border-border p-5 sm:p-6 mb-8">
+          <BulletList items={section5Content.bullets} />
         </div>
+
+        {/* Closing — emphasized takeaway */}
+        <p className="text-foreground font-semibold text-base sm:text-[17px] mb-3">
+          {section5Content.closing[0]}
+        </p>
+        <p className="text-foreground-muted text-base sm:text-lg leading-relaxed mb-8">
+          {section5Content.closing[1]}
+        </p>
 
         <PrimaryButton href={section5Content.cta.href}>
           {section5Content.cta.label}

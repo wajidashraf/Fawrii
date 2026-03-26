@@ -29,18 +29,18 @@ export function MissionValuesSection() {
           {section2Content.subHeading}
         </h3>
 
-        <BulletList items={section2Content.bullets} className="space-y-3 mb-8" />
-
-        <div className="space-y-3 mb-8">
-          {section2Content.closing.map((p) => (
-            <p
-              key={p}
-              className="text-foreground-muted text-base sm:text-lg leading-relaxed"
-            >
-              {p}
-            </p>
-          ))}
+        {/* Callout card for values — matches homepage card-box pattern */}
+        <div className="rounded-xl bg-surface border border-border p-5 sm:p-6 mb-8">
+          <BulletList items={section2Content.bullets} />
         </div>
+
+        {/* Closing — emphasized takeaway */}
+        <p className="text-foreground font-semibold text-base sm:text-[17px] mb-3">
+          {section2Content.closing[0]}
+        </p>
+        <p className="text-foreground-muted text-base sm:text-lg leading-relaxed mb-8">
+          {section2Content.closing[1]}
+        </p>
 
         <PrimaryButton href={section2Content.cta.href}>
           {section2Content.cta.label}

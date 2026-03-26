@@ -12,7 +12,7 @@ export function ParentReassuranceSection() {
       className="py-10 md:py-16"
     >
       {/* Centred, narrow block per brief — visually lighter */}
-      <div className="max-w-3xl mx-auto text-center">
+      <div className="max-w-3xl md:max-w-4xl mx-auto text-center">
         <SectionHeading>{section6Content.headline}</SectionHeading>
 
         <p className="text-foreground-muted text-base sm:text-lg leading-relaxed mb-4">
@@ -23,7 +23,8 @@ export function ParentReassuranceSection() {
           {section6Content.subHeading}
         </p>
 
-        <div className="text-left max-w-md mx-auto mb-8">
+        {/* Callout card for features — matches homepage card-box pattern */}
+        <div className="rounded-xl bg-surface border border-border p-5 sm:p-6 text-left max-w-lg mx-auto mb-8">
           <TickList items={section6Content.features} />
         </div>
 

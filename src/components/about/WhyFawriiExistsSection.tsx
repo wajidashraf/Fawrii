@@ -21,12 +21,19 @@ export function WhyFawriiExistsSection() {
           {section1Content.subIntro}
         </p>
 
-        <div className="mb-8">
+        {/* Callout card for frustrations — matches homepage card-box pattern */}
+        <div className="rounded-xl bg-background-alt border border-border p-5 sm:p-6 mb-8">
           <BulletList items={section1Content.frustrations} />
         </div>
 
+        {/* Transition statement — emphasized */}
+        <p className="text-foreground font-semibold text-base sm:text-[17px] mb-3">
+          {section1Content.response[0]}
+        </p>
+
+        {/* Supporting response copy */}
         <div className="space-y-3 mb-8">
-          {section1Content.response.map((p) => (
+          {section1Content.response.slice(1).map((p) => (
             <p
               key={p}
               className="text-foreground-muted text-base sm:text-lg leading-relaxed"
