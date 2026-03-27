@@ -41,7 +41,7 @@ export function Step3Section() {
             key={session.title}
             className="rounded-xl border border-border bg-surface shadow-sm hover:shadow-md transition-shadow duration-200 p-6 sm:p-8"
           >
-            <div className="flex items-start gap-4">
+            <div className="flex flex-col sm:flex-row items-start gap-4">
               <div className="flex-shrink-0 h-12 w-12 rounded-lg bg-primary-light flex items-center justify-center">
                 {getIcon(session.icon, "h-6 w-6 text-primary")}
               </div>
