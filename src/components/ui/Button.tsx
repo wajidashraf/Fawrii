@@ -21,7 +21,7 @@ export function Button({
 
   const variants = {
     primary:
-      "bg-primary text-white rounded-lg hover:bg-primary-hover",
+      "bg-primary text-white rounded-lg hover:bg-primary-hover active:scale-95",
     secondary:
       "text-primary hover:text-primary-hover underline-offset-4 hover:underline",
   };

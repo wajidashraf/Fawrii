@@ -23,7 +23,7 @@ export function HowTutorsWorkSection() {
         {howTutorsWorkContent.formats.map((format, index) => (
           <div
             key={format.title}
-            className="rounded-xl bg-background-alt border border-border p-5 sm:p-6 shadow-sm hover:shadow-md transition-shadow"
+            className="rounded-xl bg-background-alt border border-border shadow-sm p-5 sm:p-6 shadow-sm hover:shadow-md transition-shadow"
           >
             {/* Format number badge */}
             <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">

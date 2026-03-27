@@ -20,7 +20,7 @@ export function TrustSafeguardingSection() {
         </p>
 
         {/* Key safeguarding points in callout card */}
-        <div className="rounded-xl bg-background-alt border border-border p-5 sm:p-6 mb-6">
+        <div className="rounded-xl bg-background-alt border border-border shadow-sm p-5 sm:p-6 mb-6">
           <ul className="space-y-2.5 ">
             {trustSafeguardingContent.bullets.map((item) => (
               <li

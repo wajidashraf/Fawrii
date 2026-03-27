@@ -28,7 +28,7 @@ export function Step2Section() {
         </p>
 
         <p className="text-foreground font-medium mb-3">You choose:</p>
-        <div className="rounded-xl bg-surface border border-border p-5 sm:p-6 mb-8">
+        <div className="rounded-xl bg-surface border border-border shadow-sm p-5 sm:p-6 mb-8">
           <BulletList items={step2Content.choices} />
         </div>
 
@@ -42,7 +42,7 @@ export function Step2Section() {
         {step2Content.sessionTypes.map((session) => (
           <div
             key={session.title}
-            className="rounded-xl border border-border bg-surface p-5 sm:p-6"
+            className="rounded-xl border border-border bg-surface shadow-sm hover:shadow-md transition-shadow duration-200 p-5 sm:p-6"
           >
             <div className="h-10 w-10 rounded-lg bg-primary-light flex items-center justify-center mb-4">
               {getIcon(session.icon, "h-5 w-5 text-primary")}

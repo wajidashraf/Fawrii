@@ -24,7 +24,7 @@ export function HowYouWorkSection() {
       </div>
 
       {/* Shared principles callout */}
-      <div className="rounded-xl bg-surface border border-border p-5 sm:p-6 mb-8 max-w-3xl">
+      <div className="rounded-xl bg-surface border border-border shadow-sm p-5 sm:p-6 mb-8 max-w-3xl">
         <h3 className="font-semibold text-foreground mb-4">
           {section2Content.acrossAll}
         </h3>
@@ -36,7 +36,7 @@ export function HowYouWorkSection() {
         {section2Content.workFormats.map((format) => (
           <div
             key={format.title}
-            className="rounded-xl bg-surface border border-border p-5 sm:p-6"
+            className="rounded-xl bg-surface border border-border shadow-sm p-5 sm:p-6"
           >
             <div className="h-10 w-10 rounded-lg bg-primary-light flex items-center justify-center mb-4">
               {getIcon(format.icon, "h-5 w-5 text-primary")}

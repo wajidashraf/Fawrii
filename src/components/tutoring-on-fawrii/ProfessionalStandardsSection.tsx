@@ -19,7 +19,7 @@ export function ProfessionalStandardsSection() {
         </p>
 
         {/* Checklist in a calm callout card per brief */}
-        <div className="rounded-xl bg-background-alt border border-border p-5 sm:p-6 mb-8">
+        <div className="rounded-xl bg-background-alt border border-border shadow-sm p-5 sm:p-6 mb-8">
           <h3 className="font-semibold text-foreground mb-4">
             {section3Content.standardsIntro}
           </h3>

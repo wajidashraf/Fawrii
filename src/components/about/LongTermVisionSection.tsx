@@ -23,7 +23,7 @@ export function LongTermVisionSection() {
         </h3>
 
         {/* Callout card for focus areas — matches homepage card-box pattern */}
-        <div className="rounded-xl bg-background-alt border border-border p-5 sm:p-6 mb-8">
+        <div className="rounded-xl bg-background-alt border border-border shadow-sm p-5 sm:p-6 mb-8">
           <BulletList items={section5Content.bullets} />
         </div>
 

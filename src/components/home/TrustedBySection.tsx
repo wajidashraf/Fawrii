@@ -23,7 +23,7 @@ export function TrustedBySection() {
         </p>
 
         {/* Trust signals — compact list in callout card */}
-        <div className="rounded-xl bg-background-alt border border-border p-5 sm:p-6 mb-6">
+        <div className="rounded-xl bg-background-alt border border-border shadow-sm p-5 sm:p-6 mb-6">
           <ul className="space-y-2.5">
             {trustedByContent.bullets.map((item) => (
               <li

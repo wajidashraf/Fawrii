@@ -53,7 +53,7 @@ export function Step4Section() {
           {step4Content.earningTypes.map((earning) => (
             <div
               key={earning.title}
-              className="rounded-xl border border-border bg-surface p-5 flex items-start gap-4"
+              className="rounded-xl border border-border bg-surface shadow-sm hover:shadow-md transition-shadow duration-200 p-5 flex items-start gap-4"
             >
               <div className="flex-shrink-0 h-10 w-10 rounded-lg bg-primary-light flex items-center justify-center">
                 {getIcon(earning.icon, "h-5 w-5 text-primary")}

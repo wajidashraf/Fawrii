@@ -9,8 +9,8 @@ import { links } from "@/content/links";
 export function Header() {
   return (
     <header
-      className="sticky top-0 z-50 w-full border-b border-border"
-      style={{ backgroundColor: 'var(--background)' }}
+      className="sticky top-0 z-50 w-full border-b border-border backdrop-blur-md"
+      style={{ backgroundColor: 'rgba(255, 255, 255, 0.92)' }}
     >
       <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
@@ -32,7 +32,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-foreground-muted hover:text-foreground transition-colors py-2"
+                className="text-sm font-medium text-foreground-muted hover:text-primary transition-colors duration-200 py-2"
               >
                 {item.label}
               </Link>

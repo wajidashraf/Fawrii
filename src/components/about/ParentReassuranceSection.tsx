@@ -24,7 +24,7 @@ export function ParentReassuranceSection() {
         </p>
 
         {/* Callout card for features — matches homepage card-box pattern */}
-        <div className="rounded-xl bg-surface border border-border p-5 sm:p-6 text-left max-w-lg mx-auto mb-8">
+        <div className="rounded-xl bg-surface border border-border shadow-sm p-5 sm:p-6 text-left max-w-lg mx-auto mb-8">
           <TickList items={section6Content.features} />
         </div>
 

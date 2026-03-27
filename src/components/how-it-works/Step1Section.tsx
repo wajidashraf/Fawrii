@@ -35,7 +35,7 @@ export function Step1Section() {
           {step1Content.checklistIntro}
         </p>
 
-        <div className="rounded-xl bg-background-alt border border-border p-5 sm:p-6">
+        <div className="rounded-xl bg-background-alt border border-border shadow-sm p-5 sm:p-6">
           <IconBulletList items={step1Content.checklist} />
         </div>
 

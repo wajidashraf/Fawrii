@@ -20,7 +20,7 @@ export function TrustSection() {
           {trustContent.subIntro}
         </p>
 
-        <div className="rounded-xl bg-surface border border-border p-5 sm:p-6 mb-8">
+        <div className="rounded-xl bg-surface border border-border shadow-sm p-5 sm:p-6 mb-8">
           <BulletList items={trustContent.bullets} />
         </div>
 

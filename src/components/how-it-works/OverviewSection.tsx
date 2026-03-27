@@ -19,7 +19,7 @@ export function OverviewSection() {
         {overviewContent.intro}
       </p>
 
-      <div className="rounded-xl bg-surface border border-border p-5 sm:p-6 mb-6">
+      <div className="rounded-xl bg-surface border border-border shadow-sm p-5 sm:p-6 mb-6">
         <BulletList items={overviewContent.steps} />
       </div>
 
@@ -32,7 +32,7 @@ export function OverviewSection() {
         {journeyDiagramSteps.map((item, index) => (
           <div key={item.step} className="relative flex lg:flex-col items-stretch">
             {/* Card */}
-            <div className="flex-1 w-full flex flex-col rounded-xl bg-surface border border-border p-5 sm:p-6 hover:shadow-md transition-shadow">
+            <div className="flex-1 w-full flex flex-col rounded-xl bg-surface border border-border shadow-sm p-5 sm:p-6 hover:shadow-md transition-shadow">
               {/* Icon */}
               <div className="flex items-center justify-center w-11 h-11 rounded-lg bg-primary-light mb-4 lg:mx-auto">
                 {getIcon(item.icon, "w-5 h-5 text-primary")}

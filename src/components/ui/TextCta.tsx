@@ -12,7 +12,7 @@ export function TextCta({ href, children, className }: TextCtaProps) {
     <Link
       href={href}
       className={cn(
-        "inline-flex items-center text-primary hover:text-primary-hover underline-offset-4 hover:underline transition-colors font-medium",
+        "inline-flex items-center text-primary hover:text-primary-hover underline-offset-4 hover:underline transition-colors duration-200 font-medium",
         className
       )}
     >

@@ -23,7 +23,7 @@ export function WhoFawriiIsForSection() {
         </p>
 
         {/* Values in a callout card */}
-        <div className="rounded-xl bg-surface border border-border p-5 sm:p-6 mb-6">
+        <div className="rounded-xl bg-surface border border-border shadow-sm p-5 sm:p-6 mb-6">
           <ul className="space-y-2.5">
             {whoFawriiIsForContent.bullets.map((item) => (
               <li

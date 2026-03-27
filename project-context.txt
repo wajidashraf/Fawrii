@@ -256,6 +256,65 @@ Major completed work (recent)
 19. Git configuration
 - Added Fawrii docs/ folder to .gitignore.
 
+20. About page callout card boxes and text hierarchy alignment
+- Wrapped all bullet lists (WhyFawriiExistsSection, MissionValuesSection, LongTermVisionSection, ParentReassuranceSection) in rounded-xl callout card boxes with border.
+- White-background sections use bg-background-alt (grayish) card background.
+- Alt-background sections use bg-surface (white) card background.
+- Added emphasized transition statements (font-semibold) and bold closing takeaways matching homepage pattern.
+- HowWeSeeTutorsSection first paragraph made bold as positioning statement.
+- ParentReassuranceSection widened to md:max-w-4xl with card at max-w-lg.
+- To revert: remove the rounded-xl div wrappers around BulletList/TickList components and restore original text styling.
+
+21. Coming Soon placeholder pages
+- Created shared ComingSoon component at src/components/shared/ComingSoon.tsx.
+- Created 7 placeholder pages for dead links: /become-tutor, /rules, /support, /disputes, /privacy, /terms, /cookies.
+- Each page uses ComingSoon component with contextual title, description, and back-to-home link.
+- All pages have proper Metadata exports for SEO.
+- To revert: delete the 7 page directories and the ComingSoon component.
+
+22. Favicon and Apple touch icon
+- Copied fawrii-logo.png as src/app/icon.png and src/app/apple-icon.png.
+- Next.js App Router automatically uses these as favicon and Apple touch icon.
+- Original favicon.ico remains as fallback for older browsers.
+- To revert: delete icon.png and apple-icon.png from src/app/.
+
+23. How-it-works journey cards redesign
+- Redesigned "The tutor journey, at a glance" 4-step cards in OverviewSection as horizontal timeline.
+- Each card now has: icon (from getIcon), "Step N" label, title, description, chevron arrow connectors.
+- Added icon and description fields to journeyDiagramSteps content in src/content/how-it-works.ts.
+- Cards use equal-height flex layout with hover:shadow-md interaction.
+- Previous design: simple StepBadge + label in plain bordered cards with connector lines.
+- To revert: restore journeyDiagramSteps to {step, label} only, reimport StepBadge, remove getIcon import.
+
+24. How-it-works page callout card boxes
+- Wrapped plain BulletList in OverviewSection, Step1Section (IconBulletList), Step2Section, SafeguardingSection, TrustSection in callout card boxes.
+- White sections use bg-background-alt, alt sections use bg-surface.
+- To revert: remove the rounded-xl div wrappers around the list components.
+
+25. Tutoring-on-fawrii InControlSection timeline redesign
+- Redesigned Apply/Review/Onboard timeline from inline mini-cards to full timeline cards matching how-it-works pattern.
+- Added icons (clipboardCheck, shield, sliders) to timeline content data.
+- Bullet list also wrapped in callout card box.
+- To revert: restore original inline timeline layout and remove icon fields from content.
+
+26. Homepage TrustedBySection callout card
+- Wrapped trust signals bullet list in bg-background-alt callout card box on white section.
+- To revert: remove the rounded-xl div wrapper around the ul element.
+
+27. UI/UX design refinement pass (guided by ui-ux-guidelines.md)
+- Shadow system upgrade: refined shadow-md and shadow-lg values for richer depth, added shadow-xs token.
+- SectionHeading: added leading-tight for tighter editorial headline rhythm.
+- PrimaryButton: added active:scale-95 press feedback + explicit focus-visible outline.
+- Button component: added active:scale-95 press state.
+- TextCta: added explicit duration-200 for smoother hover transitions.
+- Header nav links: hover colour changed from text-foreground to text-primary (brand-aware).
+- Header: upgraded to frosted glass effect with backdrop-blur-md + rgba(255,255,255,0.92) background.
+- All 21 callout card boxes across all pages: added shadow-sm for subtle rest-state depth.
+- Feature/session cards (Step2, Step3, Step4): added shadow-sm + hover:shadow-md + transition-shadow.
+- To revert shadows: remove shadow-sm from callout cards, remove shadow-sm/hover:shadow-md from feature cards.
+- To revert header: replace backdrop-blur-md and rgba bg with original solid backgroundColor var(--background).
+- To revert buttons: remove active:scale-95 from PrimaryButton and Button.
+
 Remaining or likely next work
 - Check for any remaining hardcoded old theme colors and align to current design system.
 - Continue reviewing page-by-page consistency in:

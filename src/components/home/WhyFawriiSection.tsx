@@ -19,7 +19,7 @@ export function WhyFawriiSection() {
         </p>
 
         {/* Pain points — visually distinct callout */}
-        <div className="rounded-xl bg-surface border border-border p-5 sm:p-6 mb-6">
+        <div className="rounded-xl bg-surface border border-border shadow-sm p-5 sm:p-6 mb-6">
           <ul className="space-y-2.5">
             {whyFawriiContent.painPoints.map((point) => (
               <li
