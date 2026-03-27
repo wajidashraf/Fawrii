@@ -17,6 +17,9 @@ import {
   section8Content,
   finalCtaContent,
 } from "@/content/pay-and-rules";
+import { MotionDiv } from "@/components/ui/motion";
+import { fadeInUp, scaleIn } from "@/lib/motion";
+import { WalletIllustration } from "@/components/ui/illustrations";
 
 export const metadata: Metadata = {
   title: "Pay & Rules | Fawrii",
@@ -32,10 +35,13 @@ export default function PayAndRulesPage() {
       {/* ===== Hero ===== */}
       <section className="w-full bg-background py-20 md:py-32">
         <div className="max-w-[90rem] mx-auto px-6 md:px-8">
+          <div className="grid lg:grid-cols-[1fr_auto] gap-10 lg:gap-16 items-center">
           <div className="max-w-3xl">
-            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-              {heroContent.headline}
-            </h1>
+            <MotionDiv variants={fadeInUp} repeat>
+              <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
+                {heroContent.headline}
+              </h1>
+            </MotionDiv>
             <div className="space-y-3 mb-8">
               {heroContent.body.map((p, idx) => (
                 <p key={idx} className="text-lg text-foreground-muted leading-relaxed">
@@ -52,15 +58,24 @@ export default function PayAndRulesPage() {
               </TextCta>
             </div>
           </div>
+
+          {/* Illustration — desktop only */}
+          <MotionDiv variants={scaleIn} delay={0.3} className="hidden lg:flex items-center justify-center">
+            <WalletIllustration className="w-64 xl:w-72 opacity-85" />
+          </MotionDiv>
+          </div>
         </div>
       </section>
 
       {/* ===== Section 1: Our Approach to Pay & Fairness ===== */}
       <section className="w-full bg-background-alt py-16 md:py-24">
         <div className="max-w-[90rem] mx-auto px-6 md:px-8">
+          <MotionDiv variants={fadeInUp} repeat>
+
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-6">
             {section1Content.headline}
           </h2>
+            </MotionDiv>
 
           <p className="text-lg text-foreground-muted leading-relaxed mb-1 max-w-3xl">
             {section1Content.intro}
@@ -87,9 +102,12 @@ export default function PayAndRulesPage() {
       {/* ===== Section 2: Who Sets the Pay? ===== */}
       <section className="w-full bg-background py-16 md:py-24">
         <div className="max-w-[90rem] mx-auto px-6 md:px-8">
+          <MotionDiv variants={fadeInUp} repeat>
+
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-6">
             {section2Content.headline}
           </h2>
+            </MotionDiv>
 
           <p className="text-lg font-semibold text-foreground mb-6 max-w-3xl">
             {section2Content.statement}
@@ -124,9 +142,12 @@ export default function PayAndRulesPage() {
       {/* ===== Section 3: How Pay Works by Lesson Type ===== */}
       <section className="w-full bg-background-alt py-16 md:py-24">
         <div className="max-w-[90rem] mx-auto px-6 md:px-8">
+          <MotionDiv variants={fadeInUp} repeat>
+
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-4">
             {section3Content.headline}
           </h2>
+            </MotionDiv>
 
           <p className="text-lg text-foreground-muted leading-relaxed mb-10 max-w-3xl">
             {section3Content.intro}
@@ -190,9 +211,12 @@ export default function PayAndRulesPage() {
       {/* ===== Section 4: Platform Handling & Deductions ===== */}
       <section className="w-full bg-background py-16 md:py-24">
         <div className="max-w-[90rem] mx-auto px-6 md:px-8">
+          <MotionDiv variants={fadeInUp} repeat>
+
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-2">
             {section4Content.headline}
           </h2>
+            </MotionDiv>
           <p className="text-xl font-semibold text-foreground mb-6">
             {section4Content.subHeading}
           </p>
@@ -249,9 +273,12 @@ export default function PayAndRulesPage() {
       {/* ===== Section 5: Cancellations & No-Shows ===== */}
       <section className="w-full bg-background-alt py-16 md:py-24">
         <div className="max-w-[90rem] mx-auto px-6 md:px-8">
+          <MotionDiv variants={fadeInUp} repeat>
+
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-2">
             {section5Content.headline}
           </h2>
+            </MotionDiv>
           <p className="text-xl font-semibold text-foreground mb-6">
             {section5Content.subHeading}
           </p>
@@ -279,9 +306,12 @@ export default function PayAndRulesPage() {
       {/* ===== Section 6: Payouts & Reliability ===== */}
       <section className="w-full bg-background py-16 md:py-24">
         <div className="max-w-[90rem] mx-auto px-6 md:px-8">
+          <MotionDiv variants={fadeInUp} repeat>
+
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-6">
             {section6Content.headline}
           </h2>
+            </MotionDiv>
 
           <p className="text-lg text-foreground-muted leading-relaxed mb-6 max-w-3xl">
             {section6Content.intro}
@@ -305,9 +335,12 @@ export default function PayAndRulesPage() {
       {/* ===== Section 7: Fair Rules & Support (no CTA) ===== */}
       <section className="w-full bg-background-alt py-16 md:py-24">
         <div className="max-w-[90rem] mx-auto px-6 md:px-8">
+          <MotionDiv variants={fadeInUp} repeat>
+
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-6">
             {section7Content.headline}
           </h2>
+            </MotionDiv>
 
           <div className="space-y-3 mb-8 max-w-3xl">
             {section7Content.intro.map((p, idx) => (
@@ -332,9 +365,12 @@ export default function PayAndRulesPage() {
       <section className="w-full bg-background py-16 md:py-24">
         <div className="max-w-[90rem] mx-auto px-6 md:px-8">
           <div className="max-w-3xl">
+            <MotionDiv variants={fadeInUp} repeat>
+
             <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-2">
               {section8Content.headline}
             </h2>
+            </MotionDiv>
             <p className="text-lg font-semibold text-foreground mb-6">
               {section8Content.subHeading}
             </p>
@@ -358,11 +394,14 @@ export default function PayAndRulesPage() {
       </section>
 
       {/* ===== Section 9: Final CTA ===== */}
-      <section className="w-full bg-primary-light py-16 md:py-24">
+      <section className="w-full relative overflow-hidden gradient-cta py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-6 md:px-8 text-center">
+          <MotionDiv variants={fadeInUp} repeat>
+
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-6">
             {finalCtaContent.headline}
           </h2>
+            </MotionDiv>
 
           <div className="mb-10">
             {finalCtaContent.body.map((p, idx) => (

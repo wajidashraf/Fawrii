@@ -4,6 +4,8 @@ import { BulletList } from "@/components/ui/BulletList";
 import { PrimaryButton } from "@/components/ui/PrimaryButton";
 import { getIcon } from "@/components/icons";
 import { section4Content } from "@/content/tutoring-on-fawrii";
+import { MotionDiv } from "@/components/ui/motion";
+import { fadeInUp, scaleIn } from "@/lib/motion";
 
 export function InControlSection() {
   return (
@@ -13,23 +15,30 @@ export function InControlSection() {
       ariaLabel="You're in control from the start"
     >
       <div className="max-w-3xl">
-        <SectionHeading>{section4Content.headline}</SectionHeading>
+        <MotionDiv variants={fadeInUp} repeat>
+          <SectionHeading>{section4Content.headline}</SectionHeading>
+        </MotionDiv>
 
-        <p className="text-foreground-muted text-base sm:text-lg leading-relaxed mb-6">
-          {section4Content.intro}
-        </p>
+        <MotionDiv variants={fadeInUp} delay={0.1} repeat>
+          <p className="text-foreground-muted text-base sm:text-lg leading-relaxed mb-6">
+            {section4Content.intro}
+          </p>
 
-        <h3 className="font-semibold text-foreground mb-4">
-          {section4Content.applyingMeans}
-        </h3>
+          <h3 className="font-semibold text-foreground mb-4">
+            {section4Content.applyingMeans}
+          </h3>
+        </MotionDiv>
 
-        <div className="rounded-xl bg-surface border border-border shadow-sm p-5 sm:p-6 mb-8">
-          <BulletList items={section4Content.bullets} />
-        </div>
+        <MotionDiv variants={scaleIn} delay={0.15} repeat>
+          <div className="rounded-xl bg-surface border border-border shadow-sm p-5 sm:p-6 mb-8">
+            <BulletList items={section4Content.bullets} />
+          </div>
+        </MotionDiv>
       </div>
 
       {/* Timeline: Apply → Review → Onboard */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-8">
+      <MotionDiv variants={scaleIn} delay={0.2} repeat>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-8">
         {section4Content.timeline.map((item, idx) => (
           <div key={item.step} className="relative flex sm:flex-col items-stretch">
             {/* Card */}
@@ -65,9 +74,11 @@ export function InControlSection() {
             )}
           </div>
         ))}
-      </div>
+        </div>
+      </MotionDiv>
 
-      <div className="max-w-3xl">
+      <MotionDiv variants={fadeInUp} delay={0.25} repeat>
+        <div className="max-w-3xl">
         <p className="text-foreground-muted text-base sm:text-lg leading-relaxed mb-8">
           {section4Content.closing}
         </p>
@@ -75,7 +86,8 @@ export function InControlSection() {
         <PrimaryButton href={section4Content.cta.href}>
           {section4Content.cta.label}
         </PrimaryButton>
-      </div>
+        </div>
+      </MotionDiv>
     </SectionWrapper>
   );
 }

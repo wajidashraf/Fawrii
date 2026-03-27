@@ -1,0 +1,9 @@
+export { BadgeIllustration } from "./BadgeIllustration";
+export { CommunityIllustration } from "./CommunityIllustration";
+export { FaqIllustration } from "./FaqIllustration";
+export { LightbulbIllustration } from "./LightbulbIllustration";
+export { ShieldIllustration } from "./ShieldIllustration";
+export { StepsIllustration } from "./StepsIllustration";
+export { TeamIllustration } from "./TeamIllustration";
+export { TutorIllustration } from "./TutorIllustration";
+export { WalletIllustration } from "./WalletIllustration";

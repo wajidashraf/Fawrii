@@ -315,6 +315,78 @@ Major completed work (recent)
 - To revert header: replace backdrop-blur-md and rgba bg with original solid backgroundColor var(--background).
 - To revert buttons: remove active:scale-95 from PrimaryButton and Button.
 
+28. Framer Motion animation system
+- Installed framer-motion as a dependency.
+- Created central animation variants in src/lib/motion.ts:
+  - fadeInUp, fadeIn, fadeInLeft, fadeInRight, scaleIn variants
+  - staggerContainer, staggerContainerWide, staggerItem for orchestrated reveals
+  - Shared easeOut cubic bezier for premium feel
+  - viewportConfig (once: true, margin: -80px) for scroll-triggered animations
+- Created reusable "use client" motion wrapper components in src/components/ui/motion/:
+  - MotionDiv: generic animated div with viewport-triggered entrance, accepts variants and delay
+  - StaggerChildren: orchestrates staggered entrance of child elements
+  - AnimatedCard: card with stagger entrance + subtle hover lift (y: -4)
+  - Barrel export via index.ts
+- Architecture: Server components import these client wrappers to add animation without losing SSR/SEO benefits.
+- All animations use only transform and opacity (GPU-accelerated, no layout shift).
+- All viewport animations fire once (viewport.once = true).
+- Framer Motion's built-in prefers-reduced-motion support is active.
+- To revert: uninstall framer-motion, delete src/lib/motion.ts and src/components/ui/motion/, remove MotionDiv/StaggerChildren/AnimatedCard imports from all section components.
+
+29. ScrollToTop button
+- Created src/components/ui/ScrollToTop.tsx ("use client" component).
+- Fixed bottom-right (bottom-6 right-6), z-50.
+- Only appears after scrolling past 500px.
+- Teal background, white up-arrow SVG icon.
+- Animated fade-in/out with AnimatePresence.
+- Added to src/app/layout.tsx.
+- To revert: remove ScrollToTop import/usage from layout.tsx, delete ScrollToTop.tsx.
+
+30. Gradient CSS utilities and decorative components
+- Added gradient utility classes to globals.css:
+  - .gradient-hero: subtle teal radial glow for hero backgrounds
+  - .gradient-cta: teal-to-secondary blend for CTA sections
+  - .gradient-accent-border: teal-to-accent horizontal gradient
+  - .gradient-fade-bottom: transparent-to-alt vertical fade
+- Added prefers-reduced-motion CSS fallback (scroll-behavior: auto).
+- Created decorative components in src/components/ui/decorative/:
+  - GradientBlob: soft blurred gradient circles, pure CSS, pointer-events-none, aria-hidden
+  - DotPattern: subtle dot grid overlay using CSS background-image
+  - Both are server components with no JS runtime cost
+- To revert: remove gradient classes from globals.css, delete src/components/ui/decorative/.
+
+31. Homepage hero section enhancement
+- Made hero section lg:min-h-dvh (100vh on desktop, normal padding on mobile).
+- Added flex items-center for vertical centering on large screens.
+- Added gradient-hero background class.
+- Added decorative GradientBlob elements (teal top-right, accent bottom-left) with responsive sizes.
+- Added DotPattern behind hero image.
+- Added staggered entrance animations: headline (0s), subheading (0.1s), CTAs (0.2s), image scaleIn (0.3s).
+- Parent section has overflow-hidden to prevent blobs from causing horizontal scroll.
+- To revert: remove min-h-dvh, flex items-center, gradient-hero, GradientBlob/DotPattern elements, MotionDiv wrappers.
+
+32. Site-wide section animations
+- Added MotionDiv fadeInUp animations to all section headings across all pages:
+  - Home page: 9 sections (HeroSection, DirectorVideoSection, WhyFawriiSection, HowTutorsWorkSection, PayControlSection, TrustSafeguardingSection, WhoFawriiIsForSection, TrustedBySection, FinalCtaSection)
+  - About page: 9 sections
+  - How-it-works page: 9 sections
+  - Tutoring-on-fawrii page: 9 sections
+  - FAQ, pay-and-rules, safeguarding pages (inline sections)
+- Home page has richer animations:
+  - Callout cards use scaleIn with 0.1s delay
+  - HowTutorsWork format cards use StaggerChildren + AnimatedCard with hover lift
+  - FinalCtaSection uses gradient-cta background + GradientBlob decorative glow
+  - Body text groups use fadeInUp with 0.15s delay
+- All FinalCta sections across pages use gradient-cta instead of flat bg-primary-light.
+- Animation pattern per section: heading fadeInUp → callout scaleIn (delay 0.1) → closing fadeInUp (delay 0.15).
+- To revert: remove all MotionDiv, StaggerChildren, AnimatedCard imports and wrapper elements from section components.
+
+Component and implementation notes (updated)
+- Shared UI building blocks (src/components/ui/) now also include:
+  - motion/MotionDiv, motion/StaggerChildren, motion/AnimatedCard ("use client" animation wrappers)
+  - ScrollToTop ("use client" scroll-to-top button)
+  - decorative/GradientBlob, decorative/DotPattern (CSS-only decorative elements)
+
 Remaining or likely next work
 - Check for any remaining hardcoded old theme colors and align to current design system.
 - Continue reviewing page-by-page consistency in:
@@ -326,6 +398,8 @@ Remaining or likely next work
   - responsive behavior
 - Review remaining pages (contact, pricing, subjects, tutors) for potential redesign.
 - Address any .env security concerns (should not be in version control).
+- Consider adding more decorative elements (DotPattern, GradientBlob) to other page hero sections.
+- Consider adding staggered animations to card grids on other pages (how-it-works, pay-and-rules).
 
 Practical rules for future edits
 - If editing a section, preserve the established visual system first.
@@ -335,8 +409,14 @@ Practical rules for future edits
   - inline trust pills
   - emphasized intro + muted support copy
   - emphasized closing takeaway
+  - MotionDiv fadeInUp for section entrance
+  - StaggerChildren + AnimatedCard for card grids
+  - GradientBlob for decorative depth
+  - gradient-cta for CTA section backgrounds
 - Keep max width aligned with the site-wide standard.
 - Use orange accent for list dots when consistency with current home-page direction is needed.
+- Animation wrappers must be "use client" — never add Framer Motion directly to server components.
+- Keep animations subtle: use fadeInUp/scaleIn, avoid bounce/spring effects.
 - Validate with typecheck after substantive changes.
 
 Recommended future context usage

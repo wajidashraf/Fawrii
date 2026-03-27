@@ -5,6 +5,8 @@ import { TextCta } from "@/components/ui/TextCta";
 import { StepBadge } from "@/components/ui/StepBadge";
 import { getIcon } from "@/components/icons";
 import { step4Content } from "@/content/how-it-works";
+import { MotionDiv } from "@/components/ui/motion";
+import { fadeInUp, scaleIn } from "@/lib/motion";
 
 export function Step4Section() {
   return (
@@ -20,9 +22,12 @@ export function Step4Section() {
         </span>
       </div>
 
-      <SectionHeading>{step4Content.headline}</SectionHeading>
+      <MotionDiv variants={fadeInUp} repeat>
+        <SectionHeading>{step4Content.headline}</SectionHeading>
+      </MotionDiv>
 
-      <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
+      <MotionDiv variants={fadeInUp} delay={0.1} repeat>
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
         {/* Left — copy */}
         <div>
           <p className="text-foreground text-lg font-medium mb-2">
@@ -83,7 +88,8 @@ export function Step4Section() {
             cancellation and no-show rules.
           </p>
         </div>
-      </div>
+        </div>
+      </MotionDiv>
     </SectionWrapper>
   );
 }

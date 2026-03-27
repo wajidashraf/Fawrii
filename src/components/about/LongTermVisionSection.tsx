@@ -3,6 +3,8 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { BulletList } from "@/components/ui/BulletList";
 import { PrimaryButton } from "@/components/ui/PrimaryButton";
 import { section5Content } from "@/content/about";
+import { MotionDiv } from "@/components/ui/motion";
+import { fadeInUp, scaleIn } from "@/lib/motion";
 
 export function LongTermVisionSection() {
   return (
@@ -11,7 +13,9 @@ export function LongTermVisionSection() {
       maxWidth="wide"
       ariaLabel="Built with long-term responsibility in mind"
     >
+      <MotionDiv variants={fadeInUp}>
       <SectionHeading>{section5Content.headline}</SectionHeading>
+      </MotionDiv>
 
       <div className="max-w-3xl">
         <p className="text-foreground-muted text-base sm:text-lg leading-relaxed mb-6">

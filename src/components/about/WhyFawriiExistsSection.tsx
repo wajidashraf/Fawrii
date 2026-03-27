@@ -3,6 +3,8 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { BulletList } from "@/components/ui/BulletList";
 import { TextCta } from "@/components/ui/TextCta";
 import { section1Content } from "@/content/about";
+import { MotionDiv } from "@/components/ui/motion";
+import { fadeInUp, scaleIn } from "@/lib/motion";
 
 export function WhyFawriiExistsSection() {
   return (
@@ -11,7 +13,9 @@ export function WhyFawriiExistsSection() {
       maxWidth="wide"
       ariaLabel="Why Fawrii exists"
     >
+      <MotionDiv variants={fadeInUp}>
       <SectionHeading>{section1Content.headline}</SectionHeading>
+      </MotionDiv>
 
       <div className="max-w-3xl">
         <p className="text-foreground-muted text-base sm:text-lg leading-relaxed mb-4">

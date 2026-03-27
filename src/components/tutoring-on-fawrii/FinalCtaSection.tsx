@@ -1,35 +1,45 @@
 import { PrimaryButton } from "@/components/ui/PrimaryButton";
 import { TextCta } from "@/components/ui/TextCta";
 import { finalCtaContent } from "@/content/tutoring-on-fawrii";
+import { MotionDiv } from "@/components/ui/motion";
+import { fadeInUp, scaleIn } from "@/lib/motion";
 
 export function FinalCtaSection() {
   return (
-    <section aria-label="Get started" className="bg-primary-light py-16 md:py-24">
+    <section aria-label="Get started" className="relative overflow-hidden gradient-cta py-16 md:py-24">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="font-heading text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-4">
-          {finalCtaContent.headline}
-        </h2>
+        <MotionDiv variants={fadeInUp} repeat>
+          <h2 className="font-heading text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-4">
+            {finalCtaContent.headline}
+          </h2>
+        </MotionDiv>
 
-        {finalCtaContent.body.map((paragraph) => (
-          <p
-            key={paragraph}
-            className="text-foreground-muted text-base sm:text-lg leading-relaxed mb-4 last:mb-8"
-          >
-            {paragraph}
-          </p>
-        ))}
+        <MotionDiv variants={fadeInUp} delay={0.1} repeat>
+          <div>
+            {finalCtaContent.body.map((paragraph) => (
+              <p
+                key={paragraph}
+                className="text-foreground-muted text-base sm:text-lg leading-relaxed mb-4 last:mb-8"
+              >
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        </MotionDiv>
 
-        <PrimaryButton href={finalCtaContent.primaryCta.href}>
-          {finalCtaContent.primaryCta.label}
-        </PrimaryButton>
+        <MotionDiv variants={fadeInUp} delay={0.2} repeat>
+          <PrimaryButton href={finalCtaContent.primaryCta.href}>
+            {finalCtaContent.primaryCta.label}
+          </PrimaryButton>
 
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
           {finalCtaContent.secondaryCtas.map((cta) => (
             <TextCta key={cta.label} href={cta.href}>
               {cta.label}
             </TextCta>
           ))}
-        </div>
+          </div>
+        </MotionDiv>
       </div>
     </section>
   );

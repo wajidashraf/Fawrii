@@ -4,6 +4,8 @@ import { BulletList } from "@/components/ui/BulletList";
 import { PrimaryButton } from "@/components/ui/PrimaryButton";
 import { getIcon } from "@/components/icons";
 import { overviewContent, journeyDiagramSteps } from "@/content/how-it-works";
+import { MotionDiv } from "@/components/ui/motion";
+import { fadeInUp, scaleIn } from "@/lib/motion";
 
 export function OverviewSection() {
   return (
@@ -13,22 +15,31 @@ export function OverviewSection() {
       maxWidth="wide"
       ariaLabel="Tutor journey overview"
     >
-      <SectionHeading>{overviewContent.headline}</SectionHeading>
+      <MotionDiv variants={fadeInUp} repeat>
+        <SectionHeading>{overviewContent.headline}</SectionHeading>
+      </MotionDiv>
 
-      <p className="text-foreground-muted text-lg mb-4">
-        {overviewContent.intro}
-      </p>
+      <MotionDiv variants={fadeInUp} delay={0.1} repeat>
+        <p className="text-foreground-muted text-lg mb-4">
+          {overviewContent.intro}
+        </p>
+      </MotionDiv>
 
-      <div className="rounded-xl bg-surface border border-border shadow-sm p-5 sm:p-6 mb-6">
-        <BulletList items={overviewContent.steps} />
-      </div>
+      <MotionDiv variants={scaleIn} delay={0.15} repeat>
+        <div className="rounded-xl bg-surface border border-border shadow-sm p-5 sm:p-6 mb-6">
+          <BulletList items={overviewContent.steps} />
+        </div>
+      </MotionDiv>
 
-      <p className="text-foreground-muted text-lg mb-10">
-        {overviewContent.closing}
-      </p>
+      <MotionDiv variants={fadeInUp} delay={0.2} repeat>
+        <p className="text-foreground-muted text-lg mb-10">
+          {overviewContent.closing}
+        </p>
+      </MotionDiv>
 
       {/* 4-Step Journey Timeline */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+      <MotionDiv variants={scaleIn} delay={0.25} repeat>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
         {journeyDiagramSteps.map((item, index) => (
           <div key={item.step} className="relative flex lg:flex-col items-stretch">
             {/* Card */}
@@ -64,11 +75,14 @@ export function OverviewSection() {
             )}
           </div>
         ))}
-      </div>
+        </div>
+      </MotionDiv>
 
-      <PrimaryButton href={overviewContent.cta.href}>
-        {overviewContent.cta.label}
-      </PrimaryButton>
+      <MotionDiv variants={fadeInUp} delay={0.3} repeat>
+        <PrimaryButton href={overviewContent.cta.href}>
+          {overviewContent.cta.label}
+        </PrimaryButton>
+      </MotionDiv>
     </SectionWrapper>
   );
 }

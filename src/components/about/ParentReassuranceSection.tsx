@@ -2,6 +2,8 @@ import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { TickList } from "@/components/ui/TickList";
 import { section6Content } from "@/content/about";
+import { MotionDiv } from "@/components/ui/motion";
+import { fadeInUp, scaleIn } from "@/lib/motion";
 
 export function ParentReassuranceSection() {
   return (
@@ -13,7 +15,9 @@ export function ParentReassuranceSection() {
     >
       {/* Centred, narrow block per brief — visually lighter */}
       <div className="max-w-3xl md:max-w-4xl mx-auto text-center">
+        <MotionDiv variants={fadeInUp}>
         <SectionHeading>{section6Content.headline}</SectionHeading>
+        </MotionDiv>
 
         <p className="text-foreground-muted text-base sm:text-lg leading-relaxed mb-4">
           {section6Content.intro}

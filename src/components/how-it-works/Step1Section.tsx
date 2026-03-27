@@ -4,6 +4,8 @@ import { PrimaryButton } from "@/components/ui/PrimaryButton";
 import { IconBulletList } from "@/components/ui/IconBulletList";
 import { StepBadge } from "@/components/ui/StepBadge";
 import { step1Content } from "@/content/how-it-works";
+import { MotionDiv } from "@/components/ui/motion";
+import { fadeInUp, scaleIn } from "@/lib/motion";
 
 export function Step1Section() {
   return (
@@ -19,34 +21,44 @@ export function Step1Section() {
         </span>
       </div>
 
-      <SectionHeading>{step1Content.headline}</SectionHeading>
+      <MotionDiv variants={fadeInUp} repeat>
+        <SectionHeading>{step1Content.headline}</SectionHeading>
+      </MotionDiv>
 
-      <div className="max-w-3xl">
-        {step1Content.intro.map((para) => (
-          <p
-            key={para}
-            className="text-foreground-muted text-base sm:text-lg leading-relaxed mb-4"
-          >
-            {para}
+      <MotionDiv variants={fadeInUp} delay={0.1} repeat>
+        <div className="max-w-3xl">
+          {step1Content.intro.map((para) => (
+            <p
+              key={para}
+              className="text-foreground-muted text-base sm:text-lg leading-relaxed mb-4"
+            >
+              {para}
+            </p>
+          ))}
+
+          <p className="text-foreground font-medium mt-8 mb-4">
+            {step1Content.checklistIntro}
           </p>
-        ))}
+        </div>
+      </MotionDiv>
 
-        <p className="text-foreground font-medium mt-8 mb-4">
-          {step1Content.checklistIntro}
-        </p>
-
+      <MotionDiv variants={scaleIn} delay={0.15} repeat>
         <div className="rounded-xl bg-background-alt border border-border shadow-sm p-5 sm:p-6">
           <IconBulletList items={step1Content.checklist} />
         </div>
+      </MotionDiv>
 
-        <p className="text-foreground-muted text-base sm:text-lg mt-6 mb-8">
-          {step1Content.closing}
-        </p>
+      <MotionDiv variants={fadeInUp} delay={0.2} repeat>
+        <div className="max-w-3xl">
+          <p className="text-foreground-muted text-base sm:text-lg mt-6 mb-8">
+            {step1Content.closing}
+          </p>
 
-        <PrimaryButton href={step1Content.cta.href}>
-          {step1Content.cta.label}
-        </PrimaryButton>
-      </div>
+          <PrimaryButton href={step1Content.cta.href}>
+            {step1Content.cta.label}
+          </PrimaryButton>
+        </div>
+      </MotionDiv>
     </SectionWrapper>
   );
 }

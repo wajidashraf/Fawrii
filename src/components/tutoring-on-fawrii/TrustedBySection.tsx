@@ -2,6 +2,8 @@ import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { TickList } from "@/components/ui/TickList";
 import { section6Content } from "@/content/tutoring-on-fawrii";
+import { MotionDiv } from "@/components/ui/motion";
+import { fadeInUp, scaleIn } from "@/lib/motion";
 
 export function TrustedBySection() {
   return (
@@ -12,7 +14,9 @@ export function TrustedBySection() {
       className="py-10 md:py-16"
     >
       <div className="max-w-3xl">
+        <MotionDiv variants={fadeInUp}>
         <SectionHeading>{section6Content.headline}</SectionHeading>
+        </MotionDiv>
 
         <p className="text-foreground-muted text-base sm:text-lg leading-relaxed mb-6">
           {section6Content.intro}

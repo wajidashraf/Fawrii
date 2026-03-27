@@ -1,5 +1,7 @@
 import { VideoEmbed } from "@/components/ui/VideoEmbed";
 import { directorVideoIntro } from "@/content/tutoring-on-fawrii";
+import { MotionDiv } from "@/components/ui/motion";
+import { fadeInUp, scaleIn } from "@/lib/motion";
 
 export function DirectorVideoSection() {
   return (
@@ -8,7 +10,10 @@ export function DirectorVideoSection() {
         <p className="text-sm text-foreground-subtle mb-6">
           {directorVideoIntro}
         </p>
+        <MotionDiv variants={scaleIn} delay={0.1}>
+
         <VideoEmbed title="A short message from the team behind Fawrii" />
+          </MotionDiv>
       </div>
     </section>
   );

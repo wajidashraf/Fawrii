@@ -5,6 +5,8 @@ import { TextCta } from "@/components/ui/TextCta";
 import { StepBadge } from "@/components/ui/StepBadge";
 import { getIcon } from "@/components/icons";
 import { step2Content } from "@/content/how-it-works";
+import { MotionDiv } from "@/components/ui/motion";
+import { fadeInUp, scaleIn } from "@/lib/motion";
 
 export function Step2Section() {
   return (
@@ -20,9 +22,12 @@ export function Step2Section() {
         </span>
       </div>
 
-      <SectionHeading>{step2Content.headline}</SectionHeading>
+      <MotionDiv variants={fadeInUp} repeat>
+        <SectionHeading>{step2Content.headline}</SectionHeading>
+      </MotionDiv>
 
-      <div className="max-w-3xl">
+      <MotionDiv variants={fadeInUp} delay={0.1} repeat>
+        <div className="max-w-3xl">
         <p className="text-foreground-muted text-base sm:text-lg leading-relaxed mb-4">
           {step2Content.intro}
         </p>
@@ -35,10 +40,12 @@ export function Step2Section() {
         <p className="text-foreground font-medium mb-4">
           {step2Content.sessionTypesIntro}
         </p>
-      </div>
+        </div>
+      </MotionDiv>
 
       {/* 3-column session type cards — equal weight per brief */}
-      <div className="grid sm:grid-cols-3 gap-5 mb-8">
+      <MotionDiv variants={scaleIn} delay={0.15} repeat>
+        <div className="grid sm:grid-cols-3 gap-5 mb-8">
         {step2Content.sessionTypes.map((session) => (
           <div
             key={session.title}
@@ -55,16 +62,19 @@ export function Step2Section() {
             </p>
           </div>
         ))}
-      </div>
+        </div>
+      </MotionDiv>
 
-      <div className="max-w-3xl">
+      <MotionDiv variants={fadeInUp} delay={0.2} repeat>
+        <div className="max-w-3xl">
         <p className="text-foreground-muted text-base sm:text-lg mb-8">
           {step2Content.closing}
         </p>
         <TextCta href={step2Content.cta.href}>
           {step2Content.cta.label}
         </TextCta>
-      </div>
+        </div>
+      </MotionDiv>
     </SectionWrapper>
   );
 }

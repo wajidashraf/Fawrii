@@ -2,6 +2,8 @@ import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { TextCta } from "@/components/ui/TextCta";
 import { section3Content } from "@/content/about";
+import { MotionDiv } from "@/components/ui/motion";
+import { fadeInUp, scaleIn } from "@/lib/motion";
 
 export function WhosBehindSection() {
   return (
@@ -10,7 +12,9 @@ export function WhosBehindSection() {
       maxWidth="wide"
       ariaLabel="Who's behind Fawrii"
     >
+      <MotionDiv variants={fadeInUp}>
       <SectionHeading>{section3Content.headline}</SectionHeading>
+      </MotionDiv>
 
       <div className="max-w-3xl">
         <div className="space-y-4 mb-8">

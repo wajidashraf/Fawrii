@@ -3,6 +3,8 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PrimaryButton } from "@/components/ui/PrimaryButton";
 import { CircleDotIcon } from "@/components/icons";
 import { section5Content } from "@/content/tutoring-on-fawrii";
+import { MotionDiv } from "@/components/ui/motion";
+import { fadeInUp, scaleIn } from "@/lib/motion";
 
 export function BuiltForProfessionalsSection() {
   return (
@@ -11,7 +13,9 @@ export function BuiltForProfessionalsSection() {
       maxWidth="wide"
       ariaLabel="A platform built for professional tutors"
     >
+      <MotionDiv variants={fadeInUp}>
       <SectionHeading>{section5Content.headline}</SectionHeading>
+      </MotionDiv>
 
       <p className="text-foreground-muted text-base sm:text-lg leading-relaxed mb-10 max-w-3xl">
         {section5Content.intro}

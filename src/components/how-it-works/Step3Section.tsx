@@ -5,6 +5,8 @@ import { PrimaryButton } from "@/components/ui/PrimaryButton";
 import { StepBadge } from "@/components/ui/StepBadge";
 import { getIcon } from "@/components/icons";
 import { step3Content } from "@/content/how-it-works";
+import { MotionDiv } from "@/components/ui/motion";
+import { fadeInUp, scaleIn } from "@/lib/motion";
 
 export function Step3Section() {
   return (
@@ -21,14 +23,19 @@ export function Step3Section() {
         </span>
       </div>
 
-      <SectionHeading>{step3Content.headline}</SectionHeading>
+      <MotionDiv variants={fadeInUp} repeat>
+        <SectionHeading>{step3Content.headline}</SectionHeading>
+      </MotionDiv>
 
-      <p className="text-foreground-muted text-base sm:text-lg leading-relaxed mb-10 max-w-3xl">
-        {step3Content.intro}
-      </p>
+      <MotionDiv variants={fadeInUp} delay={0.1} repeat>
+        <p className="text-foreground-muted text-base sm:text-lg leading-relaxed mb-10 max-w-3xl">
+          {step3Content.intro}
+        </p>
+      </MotionDiv>
 
       {/* Session type detail cards */}
-      <div className="space-y-6 mb-10">
+      <MotionDiv variants={scaleIn} delay={0.15} repeat>
+        <div className="space-y-6 mb-10">
         {step3Content.sessionTypes.map((session) => (
           <div
             key={session.title}
@@ -50,15 +57,18 @@ export function Step3Section() {
             </div>
           </div>
         ))}
-      </div>
+        </div>
+      </MotionDiv>
 
-      <p className="text-foreground-muted text-base sm:text-lg mb-8">
+      <MotionDiv variants={fadeInUp} delay={0.2} repeat>
+        <p className="text-foreground-muted text-base sm:text-lg mb-8">
         {step3Content.closing}
       </p>
 
-      <PrimaryButton href={step3Content.cta.href}>
-        {step3Content.cta.label}
-      </PrimaryButton>
+        <PrimaryButton href={step3Content.cta.href}>
+          {step3Content.cta.label}
+        </PrimaryButton>
+      </MotionDiv>
     </SectionWrapper>
   );
 }

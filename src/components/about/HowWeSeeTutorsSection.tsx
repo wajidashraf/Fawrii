@@ -2,6 +2,8 @@ import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PrimaryButton } from "@/components/ui/PrimaryButton";
 import { section4Content } from "@/content/about";
+import { MotionDiv } from "@/components/ui/motion";
+import { fadeInUp, scaleIn } from "@/lib/motion";
 
 export function HowWeSeeTutorsSection() {
   return (
@@ -12,9 +14,11 @@ export function HowWeSeeTutorsSection() {
     >
       {/* Narrow, centred content for editorial reflective feel per brief */}
       <div className="max-w-2xl mx-auto">
+        <MotionDiv variants={fadeInUp}>
         <SectionHeading className="mb-8">
           {section4Content.headline}
         </SectionHeading>
+        </MotionDiv>
 
         {/* First paragraph — bold positioning statement */}
         <p className="text-foreground font-semibold text-base sm:text-[17px] mb-5">

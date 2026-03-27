@@ -146,3 +146,32 @@ video {
     min-height: 44px;
   }
 }
+
+/* ===== Gradient Utilities ===== */
+
+/* Hero gradient — subtle teal radial glow */
+.gradient-hero {
+  background: radial-gradient(ellipse 80% 60% at 70% 40%, rgba(22, 134, 134, 0.06) 0%, transparent 70%);
+}
+
+/* CTA section gradient — teal to secondary soft blend */
+.gradient-cta {
+  background: linear-gradient(135deg, var(--primary-light) 0%, #E6F2FE 50%, var(--primary-light) 100%);
+}
+
+/* Subtle gradient accent line — for card top borders */
+.gradient-accent-border {
+  background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+}
+
+/* Section transition gradient — soft fade overlay */
+.gradient-fade-bottom {
+  background: linear-gradient(to bottom, transparent 0%, var(--background-alt) 100%);
+}
+
+/* ===== Reduced Motion ===== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
