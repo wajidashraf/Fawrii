@@ -47,23 +47,27 @@ export function HowYouWorkSection() {
             key={format.title}
             className="rounded-xl bg-surface border border-border shadow-sm p-5 sm:p-6"
           >
-            <div className="h-10 w-10 rounded-lg bg-primary-light flex items-center justify-center mb-4">
-              {getIcon(format.icon, "h-5 w-5 text-primary")}
+            <div className="flex flex-row md:flex-col items-start gap-4 md:gap-0">
+              <div className="flex-shrink-0 h-10 w-10 rounded-lg bg-primary-light flex items-center justify-center md:mb-4">
+                {getIcon(format.icon, "h-5 w-5 text-primary")}
+              </div>
+              <div className="flex-1 md:contents">
+                <h4 className="font-heading text-base font-semibold text-foreground mb-3">
+                  {format.title}
+                </h4>
+                <ul className="space-y-2">
+                  {format.bullets.map((bullet) => (
+                    <li
+                      key={bullet}
+                      className="flex items-start gap-2.5 text-foreground-muted text-sm leading-relaxed"
+                    >
+                      <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-accent mt-1.5" />
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <h4 className="font-heading text-base font-semibold text-foreground mb-3">
-              {format.title}
-            </h4>
-            <ul className="space-y-2">
-              {format.bullets.map((bullet) => (
-                <li
-                  key={bullet}
-                  className="flex items-start gap-2.5 text-foreground-muted text-sm leading-relaxed"
-                >
-                  <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-accent mt-1.5" />
-                  {bullet}
-                </li>
-              ))}
-            </ul>
           </div>
         ))}
         </div>
